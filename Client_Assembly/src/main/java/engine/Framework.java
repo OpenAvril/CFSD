@@ -1,7 +1,6 @@
 package engine;
 import SIMULATION.Simulation;
 import structs.*;
-import threads.GraphicsEngine;
 import threads.IO_ListenRespond;
 
 public class Framework
@@ -15,7 +14,6 @@ public class Framework
     private static User_Input _stat_STRUCT_User_Inputs;
     private static User_Output _stat_STRUCT_User_Outputs;
     private static IO_ListenRespond _stat_THREAD_IO_ListenRespond;
-    private static GraphicsEngine _stat_THREAD_3dGraphics;
     private static Simulation SIMULATION;
     // public.
     public Framework() {
@@ -88,8 +86,6 @@ public class Framework
         System.out.printf("done independent THREAD IO_ListenRespond().%n");
 
         System.out.printf("started independent THREAD GraphicsEngine().%n");
-        stat_THREAD_boot1_DEFINE_3dGraphics();
-        stat_THREAD_boot3_INITIALISE_3dGraphics();
         //this.dyn_THREAD_get_IO_ListenRespond().dyn_REG_boot1_DEFINE_IO_ListenRespond(this);
         //this.dyn_THREAD_get_IO_ListenRespond().dyn_REG_boot2_SUBSTANTIATE_IO_ListenRespond(this);
         //this.dyn_THREAD_get_IO_ListenRespond().dyn_REG_boot3_INITIALISE_IO_ListenRespond(this, this.dyn_STRUCT_get_Input(), this.dyn_STRUCT_get_Output());
@@ -157,7 +153,7 @@ public class Framework
         System.out.printf("`                 V                 '%n");
         System.out.printf("%n");
 
-        this.dyn_THREAD_get_3d_Graphics().dyn_APP_boot3_INITIALISE_3dGraphics();
+        //this.dyn_THREAD_get_3d_Graphics().dyn_APP_boot3_INITIALISE_3dGraphics();
 
         System.out.printf("started PROGRAM - LAUNCH THREADS.%n");
         this.dyn_CLASS_get_App().dyn_CLASS_get_Execute().dyn_APP_Launch_Threads(this);
@@ -219,9 +215,6 @@ public class Framework
     }
     public IO_ListenRespond dyn_THREAD_get_IO_ListenRespond() {
         return stat_THREAD_get_IO_ListenRespond();
-    }
-    public GraphicsEngine dyn_THREAD_get_3d_Graphics() {
-        return stat_THREAD_get_3dGraphics();
     }
     public void dyn_STRUCT_boot0_DECLAIRE()
     {
@@ -408,34 +401,12 @@ public class Framework
     {
         return _stat_STRUCT_User_Algorithms;
     }
-    private static void stat_THREAD_boot1_DEFINE_3dGraphics()
-    {
-        _stat_THREAD_3dGraphics = null;
-    }
     private static void stat_THREAD_boot1_DEFINE_IO_ListenRespond()
     {
         _stat_THREAD_IO_ListenRespond = null;
     }
-    private static void stat_THREAD_boot3_INITIALISE_3dGraphics() {
-        _stat_THREAD_3dGraphics = new GraphicsEngine();
-        try {
-            stat_THREAD_get_IO_ListenRespond();
-        }
-        catch (NullPointerException e) {
-            System.out.printf("NullPointerException.%n");
-        }
-    }
     private static void stat_THREAD_boot3_INITIALISE_IO_ListenRespond() {
-        _stat_THREAD_IO_ListenRespond = new IO_ListenRespond();
-        try {
-            stat_THREAD_get_3dGraphics();
-        }
-        catch (NullPointerException e) {
-            System.out.printf("NullPointerException.%n");
-        }
-    }
-    private static GraphicsEngine stat_THREAD_get_3dGraphics() {
-        return _stat_THREAD_3dGraphics;
+
     }
     private static IO_ListenRespond stat_THREAD_get_IO_ListenRespond() {
         return _stat_THREAD_IO_ListenRespond;

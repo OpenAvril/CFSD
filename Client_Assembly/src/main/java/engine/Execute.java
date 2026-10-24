@@ -1,7 +1,6 @@
 package engine;
 
 import com.sun.jna.Pointer;
-import threads.GraphicsEngine;
 import main.IO.WriteQue_ConditionCode;
 import main.IO.WriteQue_SimulationIO;
 import main.IO.WriteQue_Simulation_InputSamples;
