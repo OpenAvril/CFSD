@@ -61,6 +61,7 @@ sudo snap install intellij-idea --channel=2026.1/stable --classic
 ---
 ## How To Guildes.
 ### Stack Flow - From Client Input Scanner To Server And Back To Client.
- - [GitHub ReadMe - How To Guide.](https://github.com/OpenAvril/OpenCFSD_Java_Assembly/blob/main/readme/How%20To%20Guide%20-%20Stack%20Flow%20From%20Client%20Input%20Scanner%20To%20Server%20And%20Back%20To%20Client.md)
+ - [GitHub ReadMe - How To Guide.]()
+   
 ### Wrapper Imports / Exports and Native IO.
- - [Wrapper Imports and Native IO.](https://github.com/OpenAvril/OpenCFSD_Java_Assembly/blob/main/readme/Wrapper_Imports.md)
+ - [Wrapper Imports and Native IO.](https://github.com/OpenAvril/Concurrent-Full-Stack-Development/blob/main/readme/Wrapper_Imports.md)
