@@ -631,7 +631,186 @@ public interface Java_zinc_control_mutex_que extends Library {
 
 ##### LaunchQue.
 ````
-
+package main.IO;
+import libs.Java_zinc_control_launch_que;
+public class LaunchQue {
+    public static byte[] generateHandle(byte sysThreadId) {
+        byte[] result;
+        try {
+            result = Java_zinc_control_launch_que.INSTANCE.generateHandle(sysThreadId);
+        } catch (NoClassDefFoundError e) {
+            System.out.printf("NoClassDefFoundError : Java_zinc_control_launch_que.INSTANCE.generateHandle(sysThreadId)%n");
+            result = null;
+        } catch (UnsatisfiedLinkError e) {
+            System.out.printf("NullPointerException : Java_zinc_control_launch_que.INSTANCE.generateHandle(sysThreadId)%n");
+            result = null;
+        } catch (NullPointerException e) {
+            throw new NullPointerException("NullPointerException : Java_zinc_control_launch_que.INSTANCE.generateHandle(sysThreadId)%n");
+        }
+        return result;
+    }
+    public void generateProgram(byte sysThreadId) {
+        try {
+            Java_zinc_control_launch_que.INSTANCE.generateProgram(sysThreadId);
+        } catch (NoClassDefFoundError e) {
+            System.out.printf("NoClassDefFoundError : Java_zinc_control_launch_que.INSTANCE.generateProgram(sysThreadId)%n");
+        } catch (UnsatisfiedLinkError e) {
+            System.out.printf("NullPointerException : Java_zinc_control_launch_que.INSTANCE.generateProgram(sysThreadId)%n");
+        } catch (NullPointerException e) {
+            throw new NullPointerException("NullPointerException : Java_zinc_control_launch_que.INSTANCE.generateProgram(sysThreadId)%n");
+        }
+    }
+    public static byte[] get_coreIdTolaunch(byte sysThreadId, byte[] handleId, byte[] bytes_concurrentThreadId) {
+        byte[] result;
+        try {
+            result = Java_zinc_control_launch_que.INSTANCE.get_coreIdTolaunch(sysThreadId, handleId, bytes_concurrentThreadId);
+        } catch (NoClassDefFoundError e) {
+            System.out.printf("NoClassDefFoundError : Java_zinc_control_launch_que.INSTANCE.get_coreIdTolaunch(byte sysThreadId, byte[] handleId, byte[] bytes_concurrentThreadId)%n");
+            result = null;
+        } catch (UnsatisfiedLinkError e) {
+            System.out.printf("NullPointerException : Java_zinc_control_launch_que.INSTANCE.get_coreIdTolaunch(byte sysThreadId, byte[] handleId, byte[] bytes_concurrentThreadId)%n");
+            result = null;
+        } catch (NullPointerException e) {
+             throw new NullPointerException("NullPointerException : Java_zinc_control_launch_que.INSTANCE.get_coreIdTolaunch(byte sysThreadId, byte[] handleId, byte[] bytes_concurrentThreadId)%n");
+        }
+        return result;
+    }
+    public static byte[] get_FlagSTATEisActive(byte sysThreadId, byte[] handleId, byte[] bytes_concurrentThreadId) {
+        byte[] result;
+        try {
+            result = Java_zinc_control_launch_que.INSTANCE.get_FlagSTATEisActive(sysThreadId, handleId, bytes_concurrentThreadId);
+        } catch (NoClassDefFoundError e) {
+            System.out.printf("NoClassDefFoundError : Java_zinc_control_launch_que.INSTANCE.get_FlagSTATEisActive(byte sysThreadId, byte[] handleId, byte[] bytes_concurrentThreadId)%n");
+            result = null;
+        } catch (UnsatisfiedLinkError e) {
+            System.out.printf("NullPointerException : Java_zinc_control_launch_que.INSTANCE.get_FlagSTATEisActive(byte sysThreadId, byte[] handleId, byte[] bytes_concurrentThreadId)%n");
+            result = null;
+        } catch (NullPointerException e) {
+            result = null;
+            throw new NullPointerException("NullPointerException : Java_zinc_control_launch_que.INSTANCE.get_FlagSTATEisActive(byte sysThreadId, byte[] handleId, byte[] bytes_concurrentThreadId)%n");
+        }
+        return result;
+    }
+    public static byte[] get_FlagSTATEofConcurrentCore(byte sysThreadId, byte[] handleId, byte[] bytes_concurrentThreadId) {
+        byte[] result;
+        try {
+            result = Java_zinc_control_launch_que.INSTANCE.get_FlagSTATEofConcurrentCore(sysThreadId, handleId, bytes_concurrentThreadId);
+        } catch (NoClassDefFoundError e) {
+            System.out.printf("NoClassDefFoundError : Java_zinc_control_launch_que.INSTANCE.get_FlagSTATEofConcurrentCore(byte sysThreadId, byte[] handleId, byte[] bytes_concurrentThreadId)%n");
+            result = null;
+        } catch (UnsatisfiedLinkError e) {
+            System.out.printf("NullPointerException : Java_zinc_control_launch_que.INSTANCE.get_FlagSTATEofConcurrentCore(byte sysThreadId, byte[] handleId, byte[] bytes_concurrentThreadId)%n");
+            result = null;
+        } catch (NullPointerException e) {
+            result = null;
+            throw new NullPointerException("NullPointerException : Java_zinc_control_launch_que.INSTANCE.get_FlagSTATEofConcurrentCore(byte sysThreadId, byte[] handleId, byte[] bytes_concurrentThreadId)%n");
+        }
+        return result;
+    }
+    public static byte[] get_FlagisIdle(byte sysThreadId, byte[] handleId, byte[] bytes_concurrentThreadId) {
+        byte[] result;
+        try {
+            result = Java_zinc_control_launch_que.INSTANCE.get_FlagisIdle(sysThreadId, handleId, bytes_concurrentThreadId);
+        } catch (NoClassDefFoundError e) {
+            System.out.printf("NoClassDefFoundError : Java_zinc_control_launch_que.INSTANCE.get_FlagisIdle(byte sysThreadId, byte[] handleId, byte[] bytes_concurrentThreadId)%n");
+            result = null;
+        } catch (UnsatisfiedLinkError e) {
+            System.out.printf("NullPointerException : Java_zinc_control_launch_que.INSTANCE.get_FlagisIdle(byte sysThreadId, byte[] handleId, byte[] bytes_concurrentThreadId)%n");
+            result = null;
+        } catch (NullPointerException e) {
+            result = null;
+            throw new NullPointerException("NullPointerException : Java_zinc_control_launch_que.INSTANCE.get_FlagisIdle(byte sysThreadId, byte[] handleId, byte[] bytes_concurrentThreadId)%n");
+        }
+        return result;
+    }
+    public static byte[] get_FlagSTATEofThreadToLaunch(byte sysThreadId, byte[] handleId, byte[] bytes_concurrentThreadId) {
+        byte[] result;
+        try {
+            result = Java_zinc_control_launch_que.INSTANCE.get_FlagSTATEofThreadToLaunch(sysThreadId, handleId, bytes_concurrentThreadId);
+        } catch (NoClassDefFoundError e) {
+            System.out.printf("NoClassDefFoundError : Java_zinc_control_launch_que.INSTANCE.get_FlagSTATEofThreadToLaunch(byte sysThreadId, byte[] handleId, byte[] bytes_concurrentThreadId)%n");
+            result = null;
+        } catch (UnsatisfiedLinkError e) {
+            System.out.printf("NullPointerException : Java_zinc_control_launch_que.INSTANCE.get_FlagSTATEofThreadToLaunch(byte sysThreadId, byte[] handleId, byte[] bytes_concurrentThreadId)%n");
+            result = null;
+        } catch (NullPointerException e) {
+            result = null;
+            throw new NullPointerException("NullPointerException : Java_zinc_control_launch_que.INSTANCE.get_FlagSTATEofThreadToLaunch(byte sysThreadId, byte[] handleId, byte[] bytes_concurrentThreadId)%n");
+        }
+        return result;
+    }
+    public static byte[] isINSTANTIATED(byte sysThreadId) {
+        byte[] result;
+        try {
+            result = Java_zinc_control_launch_que.INSTANCE.isINSTANTIATED(sysThreadId);
+        } catch (NoClassDefFoundError e) {
+            System.out.printf("NoClassDefFoundError : Java_zinc_control_launch_que.INSTANCE.isINSTANTIATED(byte sysThreadId)%n");
+            result = null;
+        } catch (UnsatisfiedLinkError e) {
+            System.out.printf("NullPointerException : Java_zinc_control_launch_que.INSTANCE.isINSTANTIATED(byte sysThreadId)%n");
+            result = null;
+        } catch (NullPointerException e) {
+            result = null;
+            throw new NullPointerException("NullPointerException : Java_zinc_control_launch_que.INSTANCE.isINSTANTIATED(byte sysThreadId)%n");
+        }
+        return result;
+    }
+    public void reInitialiseHandle(byte sysThreadId, byte[] handleId, byte[] bytes_concurrentThreadId, byte MAX_NUMBER_OF_CONCURRENT_TASK_THREADS) {
+        try {
+            Java_zinc_control_launch_que.INSTANCE.reInitialiseHandle(sysThreadId, handleId, bytes_concurrentThreadId, MAX_NUMBER_OF_CONCURRENT_TASK_THREADS);
+        } catch (NoClassDefFoundError e) {
+            System.out.printf("NoClassDefFoundError : Java_zinc_control_launch_que.INSTANCE.reInitialiseHandle(byte sysThreadId, byte[] handleId, byte[] bytes_concurrentThreadId, byte MAX_NUMBER_OF_CONCURRENT_TASK_THREADS)%n");
+        } catch (UnsatisfiedLinkError e) {
+            System.out.printf("NullPointerException : Java_zinc_control_launch_que.INSTANCE.reInitialiseHandle(byte sysThreadId, byte[] handleId, byte[] bytes_concurrentThreadId, byte MAX_NUMBER_OF_CONCURRENT_TASK_THREADS)%n");
+        } catch (NullPointerException e) {
+            throw new NullPointerException("NullPointerException : Java_zinc_control_launch_que.INSTANCE.reInitialiseHandle(byte sysThreadId, byte[] handleId, byte[] bytes_concurrentThreadId, byte MAX_NUMBER_OF_CONCURRENT_TASK_THREADS)%n");
+        }
+    }
+    public void set_FlagSTATEofConcurrentCore(byte sysThreadId, byte[] handleId, byte[] bytes_concurrentThreadId, byte[] byteBool) {
+        try {
+            Java_zinc_control_launch_que.INSTANCE.set_FlagSTATEofConcurrentCore(sysThreadId, handleId, bytes_concurrentThreadId, byteBool);
+        } catch (NoClassDefFoundError e) {
+            System.out.printf("NoClassDefFoundError : Java_zinc_control_launch_que.INSTANCE.set_FlagSTATEofConcurrentCore(byte sysThreadId, byte[] handleId, byte[] bytes_concurrentThreadId, byte[] byteBool)%n");
+        } catch (UnsatisfiedLinkError e) {
+            System.out.printf("NullPointerException : Java_zinc_control_launch_que.INSTANCE.set_FlagSTATEofConcurrentCore(byte sysThreadId, byte[] handleId, byte[] bytes_concurrentThreadId, byte[] byteBool)%n");
+        } catch (NullPointerException e) {
+            throw new NullPointerException("NullPointerException : Java_zinc_control_launch_que.INSTANCE.set_FlagSTATEofConcurrentCore(byte sysThreadId, byte[] handleId, byte[] bytes_concurrentThreadId, byte[] byteBool)%n");
+        }
+    }
+    public void terminateProgaram(byte sysThreadId) {
+        try {
+            Java_zinc_control_launch_que.INSTANCE.terminateProgaram(sysThreadId);
+        } catch (NoClassDefFoundError e) {
+            System.out.printf("NoClassDefFoundError : Java_zinc_control_launch_que.INSTANCE.terminateProgaram(byte sysThreadId)%n");
+        } catch (UnsatisfiedLinkError e) {
+            System.out.printf("NullPointerException : Java_zinc_control_launch_que.INSTANCE.terminateProgaram(byte sysThreadId)%n");
+        } catch (NullPointerException e) {
+            throw new NullPointerException("NullPointerException : Java_zinc_control_launch_que.terminateProgaram.generateProgram(byte sysThreadId)%n");
+        }
+    }
+    public void threadRequestlaunch(byte sysThreadId, byte[] handleId, byte[] bytes_concurrentThreadId) {
+        try {
+            Java_zinc_control_launch_que.INSTANCE.threadRequestlaunch(sysThreadId, handleId, bytes_concurrentThreadId);
+        } catch (NoClassDefFoundError e) {
+            System.out.printf("NoClassDefFoundError : Java_zinc_control_launch_que.INSTANCE.threadRequestlaunch(byte sysThreadId, byte[] handleId, byte[] bytes_concurrentThreadId)%n");
+        } catch (UnsatisfiedLinkError e) {
+            System.out.printf("NullPointerException : Java_zinc_control_launch_que.INSTANCE.threadRequestlaunch(byte sysThreadId, byte[] handleId, byte[] bytes_concurrentThreadId)%n");
+        } catch (NullPointerException e) {
+            throw new NullPointerException("NullPointerException : Java_zinc_control_launch_que.INSTANCE.threadRequestlaunch(byte sysThreadId, byte[] handleId, byte[] bytes_concurrentThreadId)%n");
+        }
+    }
+    public void threadEnd(byte sysThreadId, byte[] handleId, byte[] bytes_concurrentThreadId) {
+        try {
+            Java_zinc_control_launch_que.INSTANCE.threadEnd(sysThreadId, handleId, bytes_concurrentThreadId);
+        } catch (NoClassDefFoundError e) {
+            System.out.printf("NoClassDefFoundError : Java_zinc_control_launch_que.INSTANCE.threadEnd(byte sysThreadId, byte[] handleId, byte[] bytes_concurrentThreadId)%n");
+        } catch (UnsatisfiedLinkError e) {
+            System.out.printf("NullPointerException : Java_zinc_control_launch_que.INSTANCE.threadEnd(byte sysThreadId, byte[] handleId, byte[] bytes_concurrentThreadId)%n");
+        } catch (NullPointerException e) {
+            throw new NullPointerException("NullPointerException : Java_zinc_control_launch_que.INSTANCE.threadEnd(byte sysThreadId, byte[] handleId, byte[] bytes_concurrentThreadId)%n");
+        }
+    }
+}
 ````
 
 
