@@ -61,7 +61,7 @@ sudo snap install intellij-idea --channel=2026.1/stable --classic
 ---
 ## How To Guildes.
 ### Stack Flow - From Client Input Scanner To Server And Back To Client.
- - [GitHub ReadMe - How To Guide.]()
+ - GitHub ReadMe - How To Guide.
    
 ### Wrapper Imports / Exports and Native IO.
  - [Wrapper Imports and Native IO.](https://github.com/OpenAvril/Concurrent-Full-Stack-Development/blob/main/readme/Wrapper_Imports.md)
