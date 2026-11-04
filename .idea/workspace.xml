@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7cda3ff5-a26a-44cd-a16d-0de022f909a8" name="Changes" comment="DEVELOPMENT_2026_10_31_1824, &lt;COMPILE_SUCCESS&gt; &lt;RUNTIME_DEV&gt;.&#10;&#10;PHASE: Design, **Implementation**, Testing, Review.&#10;BUILD: DEVELOPMENT_2026_10_31_1824&#10;&#10;IMPLEMENTED:&#10;&#10;TODO:&#10; - Framework.java&#10; - Global.java&#10; INDEPENDENT:&#10;   - Algorithm.java&#10;   - Algorithm_Control.java&#10;   - Input.java&#10;   - Output.java&#10;   - User_Input.java&#10;   - User_Output.java&#10;   - User_Algoithm.java&#10;   PRAISE_SETS:&#10;     - Input_praise0.java&#10;     - Input_praise1.java&#10;     - Input_praise2.java&#10;     - Input_praise3.java&#10;     - Algoithm_praise0.java&#10;     - Algoithm_praise1.java&#10;     - Algoithm_praise2.java&#10;     - Algoithm_praise3.java&#10;     - Output_praise0.java&#10;     - Output_praise1.java&#10;     - Output_praise2.java&#10;     - Output_praise3.java&#10;   THREADS&#10;     - Thread_InputListen.java&#10;     - Thread_OutputRespond.java&#10; - App.java&#10; - Algorithms.java&#10; - Data.java&#10; - Execute.java&#10; - Execute_Control.java">
+    <list default="true" id="7cda3ff5-a26a-44cd-a16d-0de022f909a8" name="Changes" comment="DEVELOPMENT_2026_10_31_1852, &lt;COMPILE_SUCCESS&gt; &lt;RUNTIME_DEV&gt;.&#10;&#10;PHASE: Design, **Implementation**, Testing, Review.&#10;BUILD: DEVELOPMENT_2026_10_31_1852&#10;&#10;IMPLEMENTED:&#10; - &#10; - Framework.java&#10; &#10;TODO:&#10; - Global.java&#10; INDEPENDENT:&#10;   - Algorithm.java&#10;   - Algorithm_Control.java&#10;   - Input.java&#10;   - Output.java&#10;   - User_Input.java&#10;   - User_Output.java&#10;   - User_Algoithm.java&#10;   PRAISE_SETS:&#10;     - Input_praise0.java&#10;     - Input_praise1.java&#10;     - Input_praise2.java&#10;     - Input_praise3.java&#10;     - Algoithm_praise0.java&#10;     - Algoithm_praise1.java&#10;     - Algoithm_praise2.java&#10;     - Algoithm_praise3.java&#10;     - Output_praise0.java&#10;     - Output_praise1.java&#10;     - Output_praise2.java&#10;     - Output_praise3.java&#10;   THREADS&#10;     - Thread_InputListen.java&#10;     - Thread_OutputRespond.java&#10; - App.java&#10; - Algorithms.java&#10; - Data.java&#10; - Execute.java&#10; - Execute_Control.java">
+      <change afterPath="$PROJECT_DIR$/Server_Assembly/src/main/java/libs/slif_epicentre-1.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server_Assembly/src/main/java/libs/slif_launch_que-1.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server_Assembly/src/main/java/libs/slif_mutex_que-1.1.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server_Assembly/src/main/java/engine/Framework.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server_Assembly/src/main/java/engine/Framework.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server_Assembly/src/main/java/OpenCFSD_Java_Assembly/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server_Assembly/src/main/java/OpenCFSD_Java_Assembly/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server_Assembly/src/main/java/libs/slif_launch_que-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server_Assembly/src/main/java/libs/slif_mutex_que-1.0.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,12 +32,12 @@
     &quot;assignee&quot;: &quot;ScholarDragon&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/OpenAvril/CFSD.git",
-    "accountId": "4dd4731f-2298-4bb6-8488-d849154166fa"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/OpenAvril/CFSD.git&quot;,
+    &quot;accountId&quot;: &quot;4dd4731f-2298-4bb6-8488-d849154166fa&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 8
@@ -52,6 +57,7 @@
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/brenton-jmaes/IdeaProjects/CFSD",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -61,6 +67,36 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Server_Assembly/src/main/java/libs" />
+      <recent name="$PROJECT_DIR$/Server_Assembly/src/main/java" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="CFSD" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="CFSD" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="CFSD" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="CFSD" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -77,7 +113,20 @@
       <option name="presentableId" value="Default" />
       <updated>1793433272003</updated>
       <workItem from="1793433273997" duration="796000" />
-      <workItem from="1793434123039" duration="2124000" />
+      <workItem from="1793434123039" duration="2289000" />
+      <workItem from="1793437264161" duration="1758000" />
+      <workItem from="1793442430853" duration="12000" />
+      <workItem from="1793442509104" duration="170000" />
+      <workItem from="1793442714271" duration="34000" />
+      <workItem from="1793442792108" duration="164000" />
+      <workItem from="1793497673555" duration="5000" />
+      <workItem from="1793498200886" duration="1561000" />
+      <workItem from="1793514695130" duration="493000" />
+      <workItem from="1793565493695" duration="1476000" />
+      <workItem from="1793569158346" duration="2185000" />
+      <workItem from="1793582457137" duration="6326000" />
+      <workItem from="1793666665163" duration="1882000" />
+      <workItem from="1793788041072" duration="552000" />
     </task>
     <task id="LOCAL-00001" summary="DEVELOPMENT_2026_10_31_1756, &lt;COMPILE_SUCCESS&gt; &lt;RUNTIME_DEV&gt;.&#10;&#10;PHASE: Design, **Implementation**, Testing, Review.&#10;BUILD: DEVELOPMENT_2026_10_31_1756&#10;&#10;IMPLEMENTED:&#10;&#10;TODO:&#10; - Framework.java&#10; - Global.java&#10; INDEPENDENT:&#10;   - Algorithm.java&#10;   - Algorithm_Control.java&#10;   - Input.java&#10;   - Output.java&#10;   - User_Input.java&#10;   - User_Output.java&#10;   - User_Algoithm.java&#10;   PRAISE_SETS:&#10;     - Input_praise0.java&#10;     - Input_praise1.java&#10;     - Input_praise2.java&#10;     - Input_praise3.java&#10;     - Algoithm_praise0.java&#10;     - Algoithm_praise1.java&#10;     - Algoithm_praise2.java&#10;     - Algoithm_praise3.java&#10;     - Output_praise0.java&#10;     - Output_praise1.java&#10;     - Output_praise2.java&#10;     - Output_praise3.java&#10;   THREADS&#10;     - Thread_InputListen.java&#10;     - Thread_OutputRespond.java&#10; - App.java&#10; - Algorithms.java&#10; - Data.java&#10; - Execute.java&#10; - Execute_Control.java">
       <option name="closed" value="true" />
@@ -135,7 +184,15 @@
       <option name="project" value="LOCAL" />
       <updated>1793435052798</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="DEVELOPMENT_2026_10_31_1852, &lt;COMPILE_SUCCESS&gt; &lt;RUNTIME_DEV&gt;.&#10;&#10;PHASE: Design, **Implementation**, Testing, Review.&#10;BUILD: DEVELOPMENT_2026_10_31_1852&#10;&#10;IMPLEMENTED:&#10; - &#10; - Framework.java&#10; &#10;TODO:&#10; - Global.java&#10; INDEPENDENT:&#10;   - Algorithm.java&#10;   - Algorithm_Control.java&#10;   - Input.java&#10;   - Output.java&#10;   - User_Input.java&#10;   - User_Output.java&#10;   - User_Algoithm.java&#10;   PRAISE_SETS:&#10;     - Input_praise0.java&#10;     - Input_praise1.java&#10;     - Input_praise2.java&#10;     - Input_praise3.java&#10;     - Algoithm_praise0.java&#10;     - Algoithm_praise1.java&#10;     - Algoithm_praise2.java&#10;     - Algoithm_praise3.java&#10;     - Output_praise0.java&#10;     - Output_praise1.java&#10;     - Output_praise2.java&#10;     - Output_praise3.java&#10;   THREADS&#10;     - Thread_InputListen.java&#10;     - Thread_OutputRespond.java&#10; - App.java&#10; - Algorithms.java&#10; - Data.java&#10; - Execute.java&#10; - Execute_Control.java">
+      <option name="closed" value="true" />
+      <created>1793436767020</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1793436767020</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +203,7 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/main'" />
     <MESSAGE value="DEVELOPMENT_2026_10_31_1756, &lt;COMPILE_SUCCESS&gt; &lt;RUNTIME_DEV&gt;.&#10;&#10;PHASE: Design, **Implementation**, Testing, Review.&#10;BUILD: DEVELOPMENT_2026_10_31_1756&#10;&#10;IMPLEMENTED:&#10;&#10;TODO:&#10; - Framework.java&#10; - Global.java&#10; INDEPENDENT:&#10;   - Algorithm.java&#10;   - Algorithm_Control.java&#10;   - Input.java&#10;   - Output.java&#10;   - User_Input.java&#10;   - User_Output.java&#10;   - User_Algoithm.java&#10;   PRAISE_SETS:&#10;     - Input_praise0.java&#10;     - Input_praise1.java&#10;     - Input_praise2.java&#10;     - Input_praise3.java&#10;     - Algoithm_praise0.java&#10;     - Algoithm_praise1.java&#10;     - Algoithm_praise2.java&#10;     - Algoithm_praise3.java&#10;     - Output_praise0.java&#10;     - Output_praise1.java&#10;     - Output_praise2.java&#10;     - Output_praise3.java&#10;   THREADS&#10;     - Thread_InputListen.java&#10;     - Thread_OutputRespond.java&#10; - App.java&#10; - Algorithms.java&#10; - Data.java&#10; - Execute.java&#10; - Execute_Control.java" />
     <MESSAGE value="DEVELOPMENT_2026_10_31_1824, &lt;COMPILE_SUCCESS&gt; &lt;RUNTIME_DEV&gt;.&#10;&#10;PHASE: Design, **Implementation**, Testing, Review.&#10;BUILD: DEVELOPMENT_2026_10_31_1824&#10;&#10;IMPLEMENTED:&#10;&#10;TODO:&#10; - Framework.java&#10; - Global.java&#10; INDEPENDENT:&#10;   - Algorithm.java&#10;   - Algorithm_Control.java&#10;   - Input.java&#10;   - Output.java&#10;   - User_Input.java&#10;   - User_Output.java&#10;   - User_Algoithm.java&#10;   PRAISE_SETS:&#10;     - Input_praise0.java&#10;     - Input_praise1.java&#10;     - Input_praise2.java&#10;     - Input_praise3.java&#10;     - Algoithm_praise0.java&#10;     - Algoithm_praise1.java&#10;     - Algoithm_praise2.java&#10;     - Algoithm_praise3.java&#10;     - Output_praise0.java&#10;     - Output_praise1.java&#10;     - Output_praise2.java&#10;     - Output_praise3.java&#10;   THREADS&#10;     - Thread_InputListen.java&#10;     - Thread_OutputRespond.java&#10; - App.java&#10; - Algorithms.java&#10; - Data.java&#10; - Execute.java&#10; - Execute_Control.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="DEVELOPMENT_2026_10_31_1824, &lt;COMPILE_SUCCESS&gt; &lt;RUNTIME_DEV&gt;.&#10;&#10;PHASE: Design, **Implementation**, Testing, Review.&#10;BUILD: DEVELOPMENT_2026_10_31_1824&#10;&#10;IMPLEMENTED:&#10;&#10;TODO:&#10; - Framework.java&#10; - Global.java&#10; INDEPENDENT:&#10;   - Algorithm.java&#10;   - Algorithm_Control.java&#10;   - Input.java&#10;   - Output.java&#10;   - User_Input.java&#10;   - User_Output.java&#10;   - User_Algoithm.java&#10;   PRAISE_SETS:&#10;     - Input_praise0.java&#10;     - Input_praise1.java&#10;     - Input_praise2.java&#10;     - Input_praise3.java&#10;     - Algoithm_praise0.java&#10;     - Algoithm_praise1.java&#10;     - Algoithm_praise2.java&#10;     - Algoithm_praise3.java&#10;     - Output_praise0.java&#10;     - Output_praise1.java&#10;     - Output_praise2.java&#10;     - Output_praise3.java&#10;   THREADS&#10;     - Thread_InputListen.java&#10;     - Thread_OutputRespond.java&#10; - App.java&#10; - Algorithms.java&#10; - Data.java&#10; - Execute.java&#10; - Execute_Control.java" />
+    <MESSAGE value="DEVELOPMENT_2026_10_31_1852, &lt;COMPILE_SUCCESS&gt; &lt;RUNTIME_DEV&gt;.&#10;&#10;PHASE: Design, **Implementation**, Testing, Review.&#10;BUILD: DEVELOPMENT_2026_10_31_1852&#10;&#10;IMPLEMENTED:&#10; - &#10; - Framework.java&#10; &#10;TODO:&#10; - Global.java&#10; INDEPENDENT:&#10;   - Algorithm.java&#10;   - Algorithm_Control.java&#10;   - Input.java&#10;   - Output.java&#10;   - User_Input.java&#10;   - User_Output.java&#10;   - User_Algoithm.java&#10;   PRAISE_SETS:&#10;     - Input_praise0.java&#10;     - Input_praise1.java&#10;     - Input_praise2.java&#10;     - Input_praise3.java&#10;     - Algoithm_praise0.java&#10;     - Algoithm_praise1.java&#10;     - Algoithm_praise2.java&#10;     - Algoithm_praise3.java&#10;     - Output_praise0.java&#10;     - Output_praise1.java&#10;     - Output_praise2.java&#10;     - Output_praise3.java&#10;   THREADS&#10;     - Thread_InputListen.java&#10;     - Thread_OutputRespond.java&#10; - App.java&#10; - Algorithms.java&#10; - Data.java&#10; - Execute.java&#10; - Execute_Control.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="DEVELOPMENT_2026_10_31_1852, &lt;COMPILE_SUCCESS&gt; &lt;RUNTIME_DEV&gt;.&#10;&#10;PHASE: Design, **Implementation**, Testing, Review.&#10;BUILD: DEVELOPMENT_2026_10_31_1852&#10;&#10;IMPLEMENTED:&#10; - &#10; - Framework.java&#10; &#10;TODO:&#10; - Global.java&#10; INDEPENDENT:&#10;   - Algorithm.java&#10;   - Algorithm_Control.java&#10;   - Input.java&#10;   - Output.java&#10;   - User_Input.java&#10;   - User_Output.java&#10;   - User_Algoithm.java&#10;   PRAISE_SETS:&#10;     - Input_praise0.java&#10;     - Input_praise1.java&#10;     - Input_praise2.java&#10;     - Input_praise3.java&#10;     - Algoithm_praise0.java&#10;     - Algoithm_praise1.java&#10;     - Algoithm_praise2.java&#10;     - Algoithm_praise3.java&#10;     - Output_praise0.java&#10;     - Output_praise1.java&#10;     - Output_praise2.java&#10;     - Output_praise3.java&#10;   THREADS&#10;     - Thread_InputListen.java&#10;     - Thread_OutputRespond.java&#10; - App.java&#10; - Algorithms.java&#10; - Data.java&#10; - Execute.java&#10; - Execute_Control.java" />
   </component>
 </project>
