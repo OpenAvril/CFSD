@@ -1,14 +1,16 @@
 package engine;
 import SIMULATION.Simulation;
-import structs.*;
-import threads.IO_ListenRespond;
+import independent.*;
+import threads.Thread_InputListen;
+import threads.Thread_OutputRespond;
 public class Framework
 {
     private static App _stat_CLASS_App;
     private static Global _stat_CLASS_Global;
     private static Algorithm _stat_STRUCT_Algorithm;
+    private static Thread_InputListen _stat_STRUCT_I_Listen;
     private static Input _stat_STRUCT_Input;
-    private static IO_ListenRespond _stat_STRUCT_IO_ListenRespond;
+    private static Thread_InputListen _stat_STRUCT_O_Respond;
     private static Output _stat_STRUCT_Output;
     private static User_Algorithm _stat_STRUCT_User_Algorithms;
     private static User_Input _stat_STRUCT_User_Inputs;

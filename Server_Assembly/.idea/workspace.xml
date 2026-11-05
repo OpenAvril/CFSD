@@ -4,9 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa0cde0f-09af-4e13-9791-aeb5fdb644a7" name="Changes" comment="DEVELOPMENT_2026_11_04_2119, &lt;COMPILE_SUCCESS&gt; &lt;RUNTIME_DEV&gt;.&#10;PHASE: *Design*, **Implementation**, Testing, Review.&#10;BUILD: DEVELOPMENT_2026_11_04_2119&#10;&#10;IMPLEMENTED:&#10; - LIBRARIES:&#10;   - CLIB_MuteQue.&#10;   - CLIB_LaunchQue.&#10;   - CLIB_Epicentre.&#10; - Framework.java&#10;&#10;TODO:">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="fa0cde0f-09af-4e13-9791-aeb5fdb644a7" name="Changes" comment="DEVELOPMENT_2026_11_05_1759, &lt;COMPILE_SUCCESS&gt; &lt;RUNTIME_DEV&gt;.&#10;&#10;PHASE: *Design*, **Implementation**, Testing, Review.&#10;BUILD: DEVELOPMENT_2026_11_05_1759.&#10;&#10;IMPLEMENTED:&#10; - LIBRARIES:&#10;   - CLIB_MuteQue v1.1.1.&#10;   - CLIB_Semisphore v1.1.1.&#10;   - CLIB_LaunchQue v1.1.1.&#10;   - CLIB_Epicentre v1.1.1.&#10; - Java : CFSD_Server_Assembly.&#10;   - Framework.java&#10;   -&#10;   &#10;TODO:&#10; - Java : CFSD_Server_Assembly.&#10;   -&#10;&#10;---">
+      <change beforePath="$PROJECT_DIR$/src/main/java/OpenCFSD_Java_Assembly/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OpenCFSD_Java_Assembly/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SIMULATION/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SIMULATION/Simulation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/engine/Framework.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/engine/Framework.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/structs/Algorithm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/structs/Algorithm_Control.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/structs/Input.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/structs/Output.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/structs/User_Algorithm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/structs/User_Input.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/structs/User_Output.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/structs/praise_sets/Algorithm_praise0.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/structs/praise_sets/Algorithm_praise1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/structs/praise_sets/Algorithm_praise2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/structs/praise_sets/Algorithm_praise3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/structs/praise_sets/Input_praise0.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/structs/praise_sets/Input_praise1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/structs/praise_sets/Input_praise2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/structs/praise_sets/Input_praise3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/structs/praise_sets/Output_praise0.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/structs/praise_sets/Output_praise1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/structs/praise_sets/Output_praise2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/structs/praise_sets/Output_praise3.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +68,7 @@
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/brenton-jmaes/IdeaProjects/slif",
+    "last_opened_file_path": "/home/brenton-jmaes/IdeaProjects/CFSD/Server_Assembly",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -74,6 +94,7 @@
       <updated>1793791129765</updated>
       <workItem from="1793791130867" duration="2048000" />
       <workItem from="1793846661257" duration="17000" />
+      <workItem from="1793865260819" duration="670000" />
     </task>
     <task id="LOCAL-00001" summary="DEVELOPMENT_2026_11_04_2119, &lt;COMPILE_SUCCESS&gt; &lt;RUNTIME_DEV&gt;.&#10;PHASE: *Design*, **Implementation**, Testing, Review.&#10;BUILD: DEVELOPMENT_2026_11_04_2119&#10;&#10;IMPLEMENTED:&#10; - LIBRARIES:&#10;   - CLIB_MuteQue.&#10;   - CLIB_LaunchQue.&#10;   - CLIB_Epicentre.&#10; - Framework.java&#10;&#10;TODO:">
       <option name="closed" value="true" />
@@ -91,7 +112,15 @@
       <option name="project" value="LOCAL" />
       <updated>1793791214401</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="DEVELOPMENT_2026_11_05_1759, &lt;COMPILE_SUCCESS&gt; &lt;RUNTIME_DEV&gt;.&#10;&#10;PHASE: *Design*, **Implementation**, Testing, Review.&#10;BUILD: DEVELOPMENT_2026_11_05_1759.&#10;&#10;IMPLEMENTED:&#10; - LIBRARIES:&#10;   - CLIB_MuteQue v1.1.1.&#10;   - CLIB_Semisphore v1.1.1.&#10;   - CLIB_LaunchQue v1.1.1.&#10;   - CLIB_Epicentre v1.1.1.&#10; - Java : CFSD_Server_Assembly.&#10;   - Framework.java&#10;   -&#10;   &#10;TODO:&#10; - Java : CFSD_Server_Assembly.&#10;   -&#10;&#10;---">
+      <option name="closed" value="true" />
+      <created>1793865706302</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1793865706302</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,6 +128,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="DEVELOPMENT_2026_11_04_2119, &lt;COMPILE_SUCCESS&gt; &lt;RUNTIME_DEV&gt;.&#10;PHASE: *Design*, **Implementation**, Testing, Review.&#10;BUILD: DEVELOPMENT_2026_11_04_2119&#10;&#10;IMPLEMENTED:&#10; - LIBRARIES:&#10;   - CLIB_MuteQue.&#10;   - CLIB_LaunchQue.&#10;   - CLIB_Epicentre.&#10; - Framework.java&#10;&#10;TODO:" />
-    <option name="LAST_COMMIT_MESSAGE" value="DEVELOPMENT_2026_11_04_2119, &lt;COMPILE_SUCCESS&gt; &lt;RUNTIME_DEV&gt;.&#10;PHASE: *Design*, **Implementation**, Testing, Review.&#10;BUILD: DEVELOPMENT_2026_11_04_2119&#10;&#10;IMPLEMENTED:&#10; - LIBRARIES:&#10;   - CLIB_MuteQue.&#10;   - CLIB_LaunchQue.&#10;   - CLIB_Epicentre.&#10; - Framework.java&#10;&#10;TODO:" />
+    <MESSAGE value="DEVELOPMENT_2026_11_05_1759, &lt;COMPILE_SUCCESS&gt; &lt;RUNTIME_DEV&gt;.&#10;&#10;PHASE: *Design*, **Implementation**, Testing, Review.&#10;BUILD: DEVELOPMENT_2026_11_05_1759.&#10;&#10;IMPLEMENTED:&#10; - LIBRARIES:&#10;   - CLIB_MuteQue v1.1.1.&#10;   - CLIB_Semisphore v1.1.1.&#10;   - CLIB_LaunchQue v1.1.1.&#10;   - CLIB_Epicentre v1.1.1.&#10; - Java : CFSD_Server_Assembly.&#10;   - Framework.java&#10;   -&#10;   &#10;TODO:&#10; - Java : CFSD_Server_Assembly.&#10;   -&#10;&#10;---" />
+    <option name="LAST_COMMIT_MESSAGE" value="DEVELOPMENT_2026_11_05_1759, &lt;COMPILE_SUCCESS&gt; &lt;RUNTIME_DEV&gt;.&#10;&#10;PHASE: *Design*, **Implementation**, Testing, Review.&#10;BUILD: DEVELOPMENT_2026_11_05_1759.&#10;&#10;IMPLEMENTED:&#10; - LIBRARIES:&#10;   - CLIB_MuteQue v1.1.1.&#10;   - CLIB_Semisphore v1.1.1.&#10;   - CLIB_LaunchQue v1.1.1.&#10;   - CLIB_Epicentre v1.1.1.&#10; - Java : CFSD_Server_Assembly.&#10;   - Framework.java&#10;   -&#10;   &#10;TODO:&#10; - Java : CFSD_Server_Assembly.&#10;   -&#10;&#10;---" />
   </component>
 </project>

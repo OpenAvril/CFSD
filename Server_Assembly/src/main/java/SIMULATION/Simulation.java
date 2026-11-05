@@ -11,9 +11,7 @@ import independent.praise_sets.Output_praise0;
 import independent.praise_sets.Output_praise1;
 import independent.praise_sets.Output_praise2;
 import independent.praise_sets.Output_praise3;
-
 import java.util.Scanner;
-
 public class Simulation
 {
     public static Input _SIMstat_REG_input_Sample;

@@ -1,5 +1,5 @@
 package OpenCFSD_Java_Assembly;
-import com.github.openavril.slif;
+//import com.github.openavril.slif;
 import engine.Framework;
 import java.io.IOException;
 
@@ -9,8 +9,6 @@ public class Main
     // public.
     public static void main(String[] args) throws IOException {
         System.out.printf("entered first member function, main().%n");
-        SysThreadsLog.g
-
         //stat_PGM_ServerAssembly = ServerAssembly.dyn_App_Generate_Program();
         System.out.printf("==========%n");
         System.out.printf("declaration.%n");
