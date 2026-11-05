@@ -255,7 +255,7 @@ public class Framework
     private static void boot3_CLASS_INITIALISE_Global(byte sysThreadId)
     {
         System.out.printf("entered boot3_CLASS_INITIALISE_Global(sysThreadId).%n");
-        _stat_CLASS_Global = new Global(byte sysThreadId);
+        _stat_CLASS_Global = new Global(sysThreadId);
         try {
             stat_CLASS_get_Global(sysThreadId);
         }

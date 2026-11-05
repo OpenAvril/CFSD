@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7cda3ff5-a26a-44cd-a16d-0de022f909a8" name="Changes" comment="DEVELOPMENT_2026_10_31_1852, &lt;COMPILE_SUCCESS&gt; &lt;RUNTIME_DEV&gt;.&#10;&#10;PHASE: Design, **Implementation**, Testing, Review.&#10;BUILD: DEVELOPMENT_2026_10_31_1852&#10;&#10;IMPLEMENTED:&#10; - &#10; - Framework.java&#10; &#10;TODO:&#10; - Global.java&#10; INDEPENDENT:&#10;   - Algorithm.java&#10;   - Algorithm_Control.java&#10;   - Input.java&#10;   - Output.java&#10;   - User_Input.java&#10;   - User_Output.java&#10;   - User_Algoithm.java&#10;   PRAISE_SETS:&#10;     - Input_praise0.java&#10;     - Input_praise1.java&#10;     - Input_praise2.java&#10;     - Input_praise3.java&#10;     - Algoithm_praise0.java&#10;     - Algoithm_praise1.java&#10;     - Algoithm_praise2.java&#10;     - Algoithm_praise3.java&#10;     - Output_praise0.java&#10;     - Output_praise1.java&#10;     - Output_praise2.java&#10;     - Output_praise3.java&#10;   THREADS&#10;     - Thread_InputListen.java&#10;     - Thread_OutputRespond.java&#10; - App.java&#10; - Algorithms.java&#10; - Data.java&#10; - Execute.java&#10; - Execute_Control.java">
-      <change afterPath="$PROJECT_DIR$/Server_Assembly/src/main/java/libs/slif_epicentre-1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server_Assembly/src/main/java/libs/slif_launch_que-1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server_Assembly/src/main/java/libs/slif_mutex_que-1.1.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server_Assembly/src/main/java/OpenCFSD_Java_Assembly/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server_Assembly/src/main/java/OpenCFSD_Java_Assembly/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server_Assembly/src/main/java/libs/slif_launch_que-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server_Assembly/src/main/java/libs/slif_mutex_que-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server_Assembly/src/main/java/engine/Framework.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server_Assembly/src/main/java/engine/Framework.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,9 +50,8 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/brenton-jmaes/IdeaProjects/CFSD",
+    "last_opened_file_path": "/home/brenton-jmaes/IdeaProjects/CFSD/Server_Assembly",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -127,6 +121,9 @@
       <workItem from="1793582457137" duration="6326000" />
       <workItem from="1793666665163" duration="1882000" />
       <workItem from="1793788041072" duration="552000" />
+      <workItem from="1793791087223" duration="155000" />
+      <workItem from="1793847176250" duration="65000" />
+      <workItem from="1793847297230" duration="3024000" />
     </task>
     <task id="LOCAL-00001" summary="DEVELOPMENT_2026_10_31_1756, &lt;COMPILE_SUCCESS&gt; &lt;RUNTIME_DEV&gt;.&#10;&#10;PHASE: Design, **Implementation**, Testing, Review.&#10;BUILD: DEVELOPMENT_2026_10_31_1756&#10;&#10;IMPLEMENTED:&#10;&#10;TODO:&#10; - Framework.java&#10; - Global.java&#10; INDEPENDENT:&#10;   - Algorithm.java&#10;   - Algorithm_Control.java&#10;   - Input.java&#10;   - Output.java&#10;   - User_Input.java&#10;   - User_Output.java&#10;   - User_Algoithm.java&#10;   PRAISE_SETS:&#10;     - Input_praise0.java&#10;     - Input_praise1.java&#10;     - Input_praise2.java&#10;     - Input_praise3.java&#10;     - Algoithm_praise0.java&#10;     - Algoithm_praise1.java&#10;     - Algoithm_praise2.java&#10;     - Algoithm_praise3.java&#10;     - Output_praise0.java&#10;     - Output_praise1.java&#10;     - Output_praise2.java&#10;     - Output_praise3.java&#10;   THREADS&#10;     - Thread_InputListen.java&#10;     - Thread_OutputRespond.java&#10; - App.java&#10; - Algorithms.java&#10; - Data.java&#10; - Execute.java&#10; - Execute_Control.java">
       <option name="closed" value="true" />
