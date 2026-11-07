@@ -65,3 +65,11 @@ sudo snap install intellij-idea --channel=2026.1/stable --classic
    
 ### Wrapper Imports / Exports and Native IO.
  - [Wrapper Imports and Native IO.](https://github.com/OpenAvril/Concurrent-Full-Stack-Development/blob/main/readme/Wrapper_Imports.md)
+
+---
+
+Copyright (c) 2026 King Brenton James Maddocks BEng(CompSys), Crown of Queensland, of the Commonwealth Empire.
+
+---
+---
+---
