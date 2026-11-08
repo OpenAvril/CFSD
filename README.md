@@ -1,10 +1,6 @@
 # OpenCFSD Java Assembly.
-## development Branch.
 
----
-## Branches.
- - main.
- - DEVELOPMENT.
+This repositaory is being enveloped by 'slif' and is expected to show in future developments of GitHub > OpenAvril > slif. 'https://github.com/OpenAvril/slif'
 
 ---
 ## Using.
@@ -68,7 +64,7 @@ sudo snap install intellij-idea --channel=2026.1/stable --classic
 
 ---
 
-Copyright (c) 2026 King Brenton James Maddocks BEng(CompSys), Crown of Queensland, of the Commonwealth Empire.
+Copyright (c) 2026 King Brenton James Maddocks BEng(CompSys) - Emperor of Queensland to the King of the Commonwealth (echelon three).
 
 ---
 ---
