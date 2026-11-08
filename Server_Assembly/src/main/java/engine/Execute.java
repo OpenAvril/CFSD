@@ -1,13 +1,14 @@
 package engine;
+import com.github.openavril.slif.Epicentre;
 import com.github.openavril.slif.MutexQue;
 public class Execute
 {
-    private static Execute_Control stat_CLASS_Execute_Control;
-    private static Thread[] stat_REG_List_Of_Threads;
-    private static int stat_PGM_HandleId_slif_Epicentre;
-    private static int stat_PGM_HandleId_slif_MutexQue_For_slif_Epicentre_ConditionCode;
-    private static int stat_PGM_HandleId_slif_MutexQue_For_Buffer_At_Simulation_InputSamples;
-    private static int stat_PGM_HandleId_slif_MutexQue_For_Buffer_At_Simulation_OutputSamples;//SIMULATION
+    private static Execute_Control stat_CLASS_Execute_Control = null;
+    private static Thread[] stat_REG_List_Of_Threads = null;
+    private static int stat_PGM_HandleId_slif_Epicentre = null;
+    private static int stat_PGM_HandleId_slif_MutexQue_For_slif_Epicentre_ConditionCode = null;
+    private static int stat_PGM_HandleId_slif_MutexQue_For_Buffer_At_Simulation_InputSamples = null;
+    private static int stat_PGM_HandleId_slif_MutexQue_For_Buffer_At_Simulation_OutputSamples = null;//SIMULATION
     // public.
     public Execute(byte sysThreadId, Framework obj) {
         System.out.printf("thread " + sysThreadId + " :: entered : Data : Data(sysThreadId)" + ".%n");
@@ -48,15 +49,16 @@ public class Execute
     private static void stat_CLASS_boot1_DEFINE_Execute(byte sysThreadId) {
         System.out.printf("thread " + sysThreadId + " :: entered : Data : Data(sysThreadId)" + ".%n");
         stat_CLASS_boot1_DEFINE_Execute_Control(sysThreadId);
-        stat_PGM_boot1_DEFINE_PGM_slif_Epicentre(sysThreadId);
-        stat_PGM_boot1_DEFINE_PGM_slif_MutexQue_For_slif_Epicentre_ConditionCode(sysThreadId);
 
         System.out.printf("thread " + sysThreadId + " :: exiting : Data : Data(sysThreadId)" + ".%n");
     }
     private static void stat_CLASS_boot3_INITIALISE_Execute(byte sysThreadId, Framework obj) {
         System.out.printf("thread " + sysThreadId + " :: entered : Data : Data(sysThreadId)" + ".%n");
         stat_CLASS_boot3_INITIALISE_Execute_Control(sysThreadId);
-
+        stat_PGM_boot3_INITIALISE_PGM_slif_MutexQue_For_slif_Epicentre_ConditionCode(sysThreadId);
+        stat_PGM_boot3_INITIALISE_slif_MutexQue_For_Buffer_At_Simulation_InputSamples(sysThreadId);
+        stat_PGM_boot3_INITIALISE_slif_MutexQue_For_Buffer_At_Simulation_OutputSamples(sysThreadId);
+        stat_PGM_boot3_INITIALISE_PGM_slif_Epicentre(sysThreadId);
         System.out.printf("thread " + sysThreadId + " :: exiting : Data : Data(sysThreadId)" + ".%n");
     }
     private static void stat_REG_boot0_DECLAIRE_Execute(byte sysThreadId) {
@@ -125,58 +127,31 @@ public class Execute
         //todo networking
         System.out.printf("thread " + sysThreadId + " :: exiting : Data : Data(sysThreadId)" + ".%n");
     }
-    private static void stat_PGM_boot1_DEFINE_PGM_slif_Epicentre(byte sysThreadId) {
-        System.out.printf("thread " + sysThreadId + " :: entered : Data : stat_PGM_boot1_DEFINE_PGM_slif_Epicentre(sysThreadId)" + ".%n");
-        stat_PGM_HandleId_slif_Epicentre = null;
-        System.out.printf("thread " + sysThreadId + " :: exiting : Data : stat_PGM_boot1_DEFINE_PGM_slif_Epicentre(sysThreadId)" + ".%n");
-    }
-    private static void stat_PGM_boot1_DEFINE_PGM_slif_MutexQue_For_slif_Epicentre_ConditionCode(byte sysThreadId) {
-        System.out.printf("thread " + sysThreadId + " :: entered : Data : stat_PGM_boot1_DEFINE_PGM_slif_MutexQue_For_slif_Epicentre_ConditionCode(sysThreadId)" + ".%n");
-        stat_PGM_HandleId_slif_MutexQue_For_slif_Epicentre_ConditionCode = null;
-        System.out.printf("thread " + sysThreadId + " :: exiting : Data : stat_PGM_boot1_DEFINE_PGM_slif_MutexQue_For_slif_Epicentre_ConditionCode(sysThreadId)" + ".%n");
-    }
-    private static void stat_PGM_boot1_PGM_slif_MutexQue_For_Buffer_At_Simulation_InputSamples(byte sysThreadId) {
-        System.out.printf("thread " + sysThreadId + " :: entered : Data : stat_PGM_boot1_GM_slif_MutexQue_For_Buffer_At_Simulation_InputSamples(sysThreadId)" + ".%n");
-        stat_PGM_HandleId_slif_MutexQue_For_Buffer_At_Simulation_InputSamples = null;
-        System.out.printf("thread " + sysThreadId + " :: exiting : Data : stat_PGM_boot1_GM_slif_MutexQue_For_Buffer_At_Simulation_InputSamples(sysThreadId)" + ".%n");
-    }
-    private static void stat_PGM_boot1_DEFINE_slif_MutexQue_For_Buffer_At_Simulation_OutputSamples(byte sysThreadId) {
-        System.out.printf("thread " + sysThreadId + " :: entered : Data : stat_PGM_boot1_DEFINE_slif_MutexQue_For_Buffer_At_Simulation_OutputSamples(sysThreadId)" + ".%n");
-        stat_PGM_HandleId_slif_MutexQue_For_Buffer_At_Simulation_OutputSamples = null;
-        System.out.printf("thread " + sysThreadId + " :: exiting : Data : Datstat_PGM_boot1_DEFINE_slif_MutexQue_For_Buffer_At_Simulation_OutputSamplesa(sysThreadId)" + ".%n");
-    }
-    private static void stat_PGM_boot3_INITIALISE__PGM_slif_Epicentre(byte sysThreadId) {
+    private static void stat_PGM_boot1_DEFFINE_PGMs(byte sysThreadId) {
         System.out.printf("thread " + sysThreadId + " :: entered : Data : Data(sysThreadId)" + ".%n");
-        try {
-            stat_PGM_HandleId_slif_Epicentre = WriteQue_SimulationIO.app_FUNCT_generate_Program();
-        }
-        catch (NullPointerException e) {
-             System.out.printf("thread " + sysThreadId + "NullPointerException" + ".%n");
-            throw new RuntimeException("NullPointerException.%n", e);
-        }
+        slif.MutexQue.generateProgram(sysThreadId);
+        slif.LaunchQue.generateProgram(sysThreadId);
+        slif.Epicentre.generateProgram(sysThreadId);
+        System.out.printf("thread " + sysThreadId + " :: exiting : Data : Data(sysThreadId)" + ".%n");
+    }
+    private static void stat_PGM_boot3_INITIALISE_PGM_slif_Epicentre(byte sysThreadId) {
+        System.out.printf("thread " + sysThreadId + " :: entered : Data : Data(sysThreadId)" + ".%n");
+        stat_PGM_HandleId_slif_Epicentre = slif.Epicentre.generateHandle(sysThreadId);
         System.out.printf("thread " + sysThreadId + " :: exiting : Data : Data(sysThreadId)" + ".%n");
     }
     private static void stat_PGM_boot3_INITIALISE_PGM_slif_MutexQue_For_slif_Epicentre_ConditionCode(byte sysThreadId) {
         System.out.printf("thread " + sysThreadId + " :: entered : Data : Data(sysThreadId)" + ".%n");
-        try {
-            stat_PGM_HandleId_slif_MutexQue_For_slif_Epicentre_ConditionCode = WriteQue_Simulation_InputSamples.app_FUNCT_generate_Program();
-        }
-        catch (NullPointerException e) {
-             System.out.printf("thread " + sysThreadId + "NullPointerException" + ".%n");
-            throw new RuntimeException("NullPointerException.%n", e);
-        }
+        stat_PGM_HandleId_slif_MutexQue_For_slif_Epicentre_ConditionCode = slif.MutexQue.generateHandle(sysThreadId);
         System.out.printf("thread " + sysThreadId + " :: exiting : Data : Data(sysThreadId)" + ".%n");
     }
-
+    private static void stat_PGM_boot3_INITIALISE_slif_MutexQue_For_Buffer_At_Simulation_InputSamples(byte sysThreadId) {
+        System.out.printf("thread " + sysThreadId + " :: entered : Data : Data(sysThreadId)" + ".%n");
+        stat_PGM_HandleId_slif_MutexQue_For_Buffer_At_Simulation_InputSamples = slif.MutexQue.generateHandle(sysThreadId);
+        System.out.printf("thread " + sysThreadId + " :: exiting : Data : Data(sysThreadId)" + ".%n");
+    }
     private static void stat_PGM_boot3_INITIALISE_slif_MutexQue_For_Buffer_At_Simulation_OutputSamples(byte sysThreadId) {
         System.out.printf("thread " + sysThreadId + " :: entered : Data : Data(sysThreadId)" + ".%n");
-        try {
-            stat_PGM_HandleId_slif_MutexQue_For_Buffer_At_Simulation_OutputSamples = slif.MutexQue.generateProgram(sysThreadId);
-        }
-        catch (NullPointerException e) {
-            System.out.printf("thread " + sysThreadId + "NullPointerException" + ".%n");
-            throw new RuntimeException("NullPointerException.%n", e);
-        }
+        stat_PGM_HandleId_slif_MutexQue_For_Buffer_At_Simulation_OutputSamples = slif.MutexQue.generateHandle(sysThreadId);
         System.out.printf("thread " + sysThreadId + " :: exiting : Data : Data(sysThreadId)" + ".%n");
     }
 }
