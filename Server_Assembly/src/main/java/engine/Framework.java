@@ -5,16 +5,16 @@ import independent.*;
 
 public class Framework
 {
-    private static App _stat_CLASS_App;
-    private static Global _stat_CLASS_Global;
-    private static Algorithm _stat_STRUCT_Algorithm;
-    private static Thread_InputListen _stat_STRUCT_I_Listen;
-    private static Input _stat_STRUCT_Input;
-    private static Thread_InputListen _stat_STRUCT_O_Respond;
-    private static Output _stat_STRUCT_Output;
-    private static User_Algorithm _stat_STRUCT_User_Algorithms;
-    private static User_Input _stat_STRUCT_User_Inputs;
-    private static User_Output _stat_STRUCT_User_Outputs;
+    private static App stat_CLASS_App;
+    private static Global stat_CLASS_Global;
+    private static Algorithm stat_STRUCT_Algorithm;
+    private static Thread_InputListen stat_STRUCT_I_Listen;
+    private static Input stat_STRUCT_Input;
+    private static Thread_InputListen stat_STRUCT_O_Respond;
+    private static Output stat_STRUCT_Output;
+    private static User_Algorithm stat_STRUCT_User_Algorithms;
+    private static User_Input stat_STRUCT_User_Inputs;
+    private static User_Output stat_STRUCT_User_Outputs;
     private static Simulation SIMULATION;
     // public.
     public Framework(byte sysThreadId) {
@@ -131,9 +131,9 @@ public class Framework
 
         System.out.printf("%n");
         System.out.printf("        ,     \\      /      ,%n");
-        System.out.printf("       / \\    )\\ __ /(     / \\ %n");
+        System.out.printf("       / \\    )\\ _ /(     / \\ %n");
         System.out.printf("      /   \\   (_\\  /_)    /   \\ %n");
-        System.out.printf("____ / ____\\__ \\@  @/ ___/_____\\_____%n");
+        System.out.printf("____ / ___\\__ \\@  @/ __/_____\\_____%n");
         System.out.printf("|              |\\../|               |%n");
         System.out.printf("|               \\VV/                |%n");
         System.out.printf("|           Java TestBench.         |%n");
@@ -223,7 +223,7 @@ public class Framework
     private static void stat_CLASS_boot1_DEFINE_App(byte sysThreadId)
     {
         System.out.printf("entered stat_CLASS_boot1_DEFINE_App(sysThreadId).%n");
-        _stat_CLASS_App = null;
+        stat_CLASS_App = null;
         System.out.printf("exiting stat_CLASS_boot1_DEFINE_App(sysThreadId).%n");
     }
     private static void stat_CLASS_boot1_DEFINE_Framework(byte sysThreadId)
@@ -235,12 +235,12 @@ public class Framework
     private static void boot1_CLASS_DEFINE_Global(byte sysThreadId)
     {
         System.out.printf("entered boot1_CLASS_DEFINE_Global(sysThreadId).%n");
-        _stat_CLASS_Global = null;
+        stat_CLASS_Global = null;
         System.out.printf("exiting boot1_CLASS_DEFINE_Global(sysThreadId).%n");
     }
     private static void stat_CLASS_boot3_INITIALISE_App(byte sysThreadId, Framework obj) {
         System.out.printf("entered stat_CLASS_boot3_INITIALISE_App(sysThreadId).%n");
-        _stat_CLASS_App = new App(obj);
+        stat_CLASS_App = new App(obj);
         try {
             stat_CLASS_get_App(sysThreadId);
         }
@@ -257,7 +257,7 @@ public class Framework
     private static void boot3_CLASS_INITIALISE_Global(byte sysThreadId)
     {
         System.out.printf("entered boot3_CLASS_INITIALISE_Global(sysThreadId).%n");
-        _stat_CLASS_Global = new Global(sysThreadId);
+        stat_CLASS_Global = new Global(sysThreadId);
         try {
             stat_CLASS_get_Global(sysThreadId);
         }
@@ -268,7 +268,7 @@ public class Framework
     }
     private static App stat_CLASS_get_App(byte sysThreadId)
     {
-        return _stat_CLASS_App;
+        return stat_CLASS_App;
     }
     private static void stat_REG_boot0_DECLAIRE_Framework(byte sysThreadId) {
         System.out.printf("entered stat_REG_boot0_DECLAIRE_Framework(sysThreadId).%n");
@@ -277,34 +277,34 @@ public class Framework
     }
     private static void stat_STRUCT_boot1_DEFINE_Algorithm(byte sysThreadId)
     {
-        _stat_STRUCT_Algorithm = null;
+        stat_STRUCT_Algorithm = null;
     }
     private static void stat_STRUCT_boot1_DEFINE_Input(byte sysThreadId)
     {
-        _stat_STRUCT_Input = null;
+        stat_STRUCT_Input = null;
     }
     private static void stat_STRUCT_boot1_DEFINE_Output(byte sysThreadId)
     {
-        _stat_STRUCT_Output = null;
+        stat_STRUCT_Output = null;
     }
     private static void stat_STRUCT_boot1_DEFINE_User_Algorithm(byte sysThreadId)
     {
-        _stat_STRUCT_User_Algorithms = null;
+        stat_STRUCT_User_Algorithms = null;
     }
     private static void stat_STRUCT_boot1_DEFINE_User_Input(byte sysThreadId)
     {
-        _stat_STRUCT_User_Inputs = null;
+        stat_STRUCT_User_Inputs = null;
     }
     private static void stat_STRUCT_boot1_DEFINE_User_Output(byte sysThreadId)
     {
-        _stat_STRUCT_User_Outputs = null;
+        stat_STRUCT_User_Outputs = null;
     }
     private static void stat_STRUCT_boot1_DEFINE_IO_ListenRespond(byte sysThreadId)
     {
-        _stat_STRUCT_IO_ListenRespond = null;
+        stat_STRUCT_IO_ListenRespond = null;
     }
     private static void stat_STRUCT_boot3_INITIALISE_Algorithm(byte sysThreadId) {
-        _stat_STRUCT_Algorithm = new Algorithm(sysThreadId);
+        stat_STRUCT_Algorithm = new Algorithm(sysThreadId);
         try {
             stat_STRUCT_get_Algorithm(sysThreadId);
         }
@@ -313,7 +313,7 @@ public class Framework
         }
     }
     private static void stat_STRUCT_boot3_INITIALISE_Input(byte sysThreadId) {
-        _stat_STRUCT_Input = new Input(sysThreadId);
+        stat_STRUCT_Input = new Input(sysThreadId);
         try {
             stat_STRUCT_get_Input(sysThreadId);
         }
@@ -322,7 +322,7 @@ public class Framework
         }
     }
     private static void stat_STRUCT_boot3_INITIALISE_Output(byte sysThreadId) {
-        _stat_STRUCT_Output = new Output(sysThreadId);
+        stat_STRUCT_Output = new Output(sysThreadId);
         try {
             stat_STRUCT_get_Output(sysThreadId);
         }
@@ -331,7 +331,7 @@ public class Framework
         }
     }
     private static void stat_STRUCT_boot3_INITIALISE_User_Algorithm(byte sysThreadId) {
-        _stat_STRUCT_User_Algorithms = new User_Algorithm(sysThreadId);
+        stat_STRUCT_User_Algorithms = new User_Algorithm(sysThreadId);
         try {
             stat_STRUCT_get_User_Algorithm(sysThreadId);
         }
@@ -340,7 +340,7 @@ public class Framework
         }
     }
     private static void stat_STRUCT_boot3_INITIALISE_User_Input(byte sysThreadId) {
-        _stat_STRUCT_User_Inputs = new User_Input(sysThreadId);
+        stat_STRUCT_User_Inputs = new User_Input(sysThreadId);
         try {
             stat_STRUCT_get_User_Input(sysThreadId);
         }
@@ -349,7 +349,7 @@ public class Framework
         }
     }
     private static void stat_STRUCT_boot3_INITIALISE_User_Output(byte sysThreadId) {
-        _stat_STRUCT_User_Outputs = new User_Output(sysThreadId);
+        stat_STRUCT_User_Outputs = new User_Output(sysThreadId);
         try {
             stat_STRUCT_get_User_Output(sysThreadId);
         }
@@ -358,7 +358,7 @@ public class Framework
         }
     }
     private static void stat_STRUCT_boot3_INITIALISE_IO_ListenRespond(byte sysThreadId) {
-        _stat_STRUCT_IO_ListenRespond = new IO_ListenRespond(sysThreadId);
+        stat_STRUCT_IO_ListenRespond = new IO_ListenRespond(sysThreadId);
         try {
             stat_STRUCT_get_IO_ListenRespond(sysThreadId);
         }
@@ -368,31 +368,31 @@ public class Framework
     }
     private static Algorithm stat_STRUCT_get_Algorithm(byte sysThreadId)
     {
-        return _stat_STRUCT_Algorithm;
+        return stat_STRUCT_Algorithm;
     }
     private static Input stat_STRUCT_get_Input(byte sysThreadId)
     {
-        return _stat_STRUCT_Input;
+        return stat_STRUCT_Input;
     }
     private static IO_ListenRespond stat_STRUCT_get_IO_ListenRespond(byte sysThreadId)
     {
-        return _stat_STRUCT_IO_ListenRespond;
+        return stat_STRUCT_IO_ListenRespond;
     }
     private static Output stat_STRUCT_get_Output(byte sysThreadId)
     {
-        return _stat_STRUCT_Output;
+        return stat_STRUCT_Output;
     }
     private static User_Input stat_STRUCT_get_User_Input(byte sysThreadId)
     {
-        return _stat_STRUCT_User_Inputs;
+        return stat_STRUCT_User_Inputs;
     }
     private static User_Output stat_STRUCT_get_User_Output(byte sysThreadId)
     {
-        return _stat_STRUCT_User_Outputs;
+        return stat_STRUCT_User_Outputs;
     }
     private static User_Algorithm stat_STRUCT_get_User_Algorithm(byte sysThreadId)
     {
-        return _stat_STRUCT_User_Algorithms;
+        return stat_STRUCT_User_Algorithms;
     }
     private static void stat_CLASS_boot1_DEFINE_SIMULATION(byte sysThreadId) {
         SIMULATION = null;
@@ -403,7 +403,7 @@ public class Framework
     }
     private static Global stat_CLASS_get_Global(byte sysThreadId)
     {
-        return _stat_CLASS_Global;
+        return stat_CLASS_Global;
     }
     private static Simulation stat_CLASS_get_SIMULATION(byte sysThreadId) {
         return SIMULATION;

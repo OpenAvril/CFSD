@@ -6,13 +6,13 @@ import main.IO.*;
 
 public class Execute
 {
-    private static Execute_Control _stat_CLASS_Execute_Control;
-    private static Thread[] _stat_REG_List_Of_Threads;
-    private static Pointer _stat_PGM_ConditionCode;
-    private static Pointer _stat_PGM_OpenEPiCentre;
-    private static Pointer _stat_PGM_SimulationIO;
-    private static Pointer _stat_PGM_WriteQue_Simulation_InputSamples;
-    private static Pointer _stat_PGM_WriteQue_Simulation_OutputSamples;//SIMULATION
+    private static Execute_Control stat_CLASS_Execute_Control;
+    private static Thread[] stat_REG_List_Of_Threads;
+    private static Pointer stat_PGM_ConditionCode;
+    private static Pointer stat_PGM_OpenEPiCentre;
+    private static Pointer stat_PGM_SimulationIO;
+    private static Pointer stat_PGM_WriteQue_Simulation_InputSamples;
+    private static Pointer stat_PGM_WriteQue_Simulation_OutputSamples;//SIMULATION
     // public.
     public Execute(Framework obj)  {
         System.out.printf("entered CLASS Execute()%n");
@@ -148,20 +148,20 @@ public class Execute
     // private.
     private static void stat_APP_Launch_Threads(Framework obj) {
         System.out.printf("entered *** Launch Threads ***.%n");
-        for (int threadId = 0; threadId < _stat_REG_List_Of_Threads.length; threadId++)
+        for (int threadId = 0; threadId < stat_REG_List_Of_Threads.length; threadId++)
         {
-            _stat_REG_List_Of_Threads[threadId].start();
+            stat_REG_List_Of_Threads[threadId].start();
         }
         System.out.printf("exiting *** Launch Threads ***.%n");
     }
     private static void stat_CLASS_boot1_DEFINE_Execute_Control() {
         System.out.printf("entered stat_CLASS_boot1_DEFINE_Execute_Control().%n");
-        _stat_CLASS_Execute_Control = null;
+        stat_CLASS_Execute_Control = null;
         System.out.printf("exiting stat_CLASS_boot1_DEFINE_Execute_Control().%n");
     }
     private static void stat_CLASS_boot3_INITIALISE_Execute_Control() {
         System.out.printf("entered stat_CLASS_boot3_INITIALISE_Execute_Control().%n");
-        _stat_CLASS_Execute_Control = new Execute_Control();
+        stat_CLASS_Execute_Control = new Execute_Control();
         try {
             stat_CLASS_get_Execute_Control();
         }
@@ -173,67 +173,67 @@ public class Execute
     }
     private static Execute_Control stat_CLASS_get_Execute_Control()
     {
-        return _stat_CLASS_Execute_Control;
+        return stat_CLASS_Execute_Control;
     }
     private static void stat_REG_boot1_DEFINE_List_Of_Threads()
     {
-        _stat_REG_List_Of_Threads = null;
+        stat_REG_List_Of_Threads = null;
     }
     private static void stat_REG_boot2_SUBSTANTIATE_List_Of_Threads(Framework obj) {
         try {
-            _stat_REG_List_Of_Threads = new Thread[Math.toIntExact(Global.dyn_REG_get_numberOfCores())];
+            stat_REG_List_Of_Threads = new Thread[Math.toIntExact(Global.dyn_REG_get_numberOfCores())];
         }
         catch (NullPointerException e) {
             System.out.printf("NullPointerException.%n");
             throw new RuntimeException("NullPointerException.%n", e);
         }
-        for (int threadId = 0; threadId < _stat_REG_List_Of_Threads.length; threadId++)
+        for (int threadId = 0; threadId < stat_REG_List_Of_Threads.length; threadId++)
         {
-            _stat_REG_List_Of_Threads[threadId] = null;
+            stat_REG_List_Of_Threads[threadId] = null;
         }
     }
     private static void stat_REG_boot3_INITIALISE_List_Of_Threads(Framework obj) {
         System.out.printf("entered Execute stat_REG_boot3_INITIALISE_List_Of_Threads().%n");
-        _stat_REG_List_Of_Threads[0] = new Thread(() -> {
+        stat_REG_List_Of_Threads[0] = new Thread(() -> {
             obj.dyn_STRUCT_get_IO_ListenRespond().dyn_App_Thread_IO(obj, (byte)0);
         });
-        _stat_REG_List_Of_Threads[1] = new Thread(() -> {
+        stat_REG_List_Of_Threads[1] = new Thread(() -> {
             obj.dyn_CLASS_get_SIMULATION().Thread_Input_Peripheral_Scanner(obj, (byte)1);
         });
-        _stat_REG_List_Of_Threads[2] = new Thread(() -> {
+        stat_REG_List_Of_Threads[2] = new Thread(() -> {
             obj.dyn_CLASS_get_SIMULATION().Thread_Output_Draw(obj, (byte)2);
         });
         System.out.printf("exiting Execute stat_REG_boot3_INITIALISE_List_Of_Threads().%n");
     }
     private static void stat_PGM_boot1_DEFINE_MyDLL() {
         System.out.printf("entered Execute stat_PGM_boot1_DEFINE_MyDLL().%n");
-        _stat_PGM_OpenEPiCentre = null;
+        stat_PGM_OpenEPiCentre = null;
         System.out.printf("exiting Execute stat_PGM_boot1_DEFINE_MyDLL().%n");
     }
     private static void stat_PGM_boot1_DEFINE_ConditionCode() {
         System.out.printf("entered Execute stat_PGM_boot1_DEFINE_ConditionCode().%n");
-        _stat_PGM_ConditionCode = null;
+        stat_PGM_ConditionCode = null;
         System.out.printf("exiting Execute stat_PGM_boot1_DEFINE_ConditionCode().%n");
     }
     private static void stat_PGM_boot1_DEFINE_SimulationIO() {
         System.out.printf("entered Execute stat_PGM_boot1_DEFINE_SimulationIO().%n");
-        _stat_PGM_SimulationIO = null;
+        stat_PGM_SimulationIO = null;
         System.out.printf("exiting Execute stat_PGM_boot1_DEFINE_SimulationIO().%n");
     }
     private static void stat_PGM_boot1_DEFINE_WriteQue_Simulation_InputSamples() {
         System.out.printf("entered Execute stat_PGM_boot1_DEFINE_ConcurrentIOServer().%n");
-        _stat_PGM_WriteQue_Simulation_InputSamples = null;
+        stat_PGM_WriteQue_Simulation_InputSamples = null;
         System.out.printf("exiting Execute stat_PGM_boot1_DEFINE_ConcurrentIOServer().%n");
     }
     private static void stat_PGM_boot1_DEFINE_WriteQue_Simulation_OutputSamples() {
         System.out.printf("entered Execute stat_PGM_boot1_DEFINE_ConcurrentIOServer().%n");
-        _stat_PGM_WriteQue_Simulation_OutputSamples = null;
+        stat_PGM_WriteQue_Simulation_OutputSamples = null;
         System.out.printf("exiting Execute stat_PGM_boot1_DEFINE_ConcurrentIOServer().%n");
     }
     private static void stat_PGM_boot3_INITIALISE_MyDLL() {
         System.out.printf("entered stat_PGM_boot3_INITIALISE_MyDLL().%n");
         try {
-            _stat_PGM_OpenEPiCentre = OpenEpiCentre.CLIBConcurrentServerIO__app_FUNCT_generate_Program();
+            stat_PGM_OpenEPiCentre = OpenEpiCentre.CLIBConcurrentServerIO__app_FUNCT_generate_Program();
         }
         catch (NullPointerException e) {
             System.out.printf("NullPointerException.%n");
@@ -244,7 +244,7 @@ public class Execute
     private static void stat_PGM_boot3_INITIALISE_ConditionCode() {
         System.out.printf("entered stat_PGM_boot3_INITIALISE_ConditionCode().%n");
         try {
-            _stat_PGM_ConditionCode = WriteQue_ConditionCode.app_FUNCT_generate_Program();
+            stat_PGM_ConditionCode = WriteQue_ConditionCode.app_FUNCT_generate_Program();
         }
         catch (NullPointerException e) {
             System.out.printf("NullPointerException.%n");
@@ -255,7 +255,7 @@ public class Execute
     private static void stat_PGM_boot3_INITIALISE_SimulationIO() {
         System.out.printf("entered stat_PGM_boot3_INITIALISE_SimulationIO().%n");
         try {
-            _stat_PGM_SimulationIO = WriteQue_SimulationIO.app_FUNCT_generate_Program();
+            stat_PGM_SimulationIO = WriteQue_SimulationIO.app_FUNCT_generate_Program();
         }
         catch (NullPointerException e) {
             System.out.printf("NullPointerException.%n");
@@ -266,7 +266,7 @@ public class Execute
     private static void stat_PGM_boot3_INITIALISE_WriteQue_Simulation_InputSamples() {
         System.out.printf("entered stat_PGM_boot3_INITIALISE_WriteQue_Client_InputSend().%n");
         try {
-            _stat_PGM_WriteQue_Simulation_InputSamples = WriteQue_Simulation_InputSamples.app_FUNCT_generate_Program();
+            stat_PGM_WriteQue_Simulation_InputSamples = WriteQue_Simulation_InputSamples.app_FUNCT_generate_Program();
         }
         catch (NullPointerException e) {
             System.out.printf("NullPointerException.%n");
@@ -277,7 +277,7 @@ public class Execute
     private static void stat_PGM_boot3_INITIALISE_WriteQue_Simulation_OutputSamples() {
         System.out.printf("entered stat_PGM_boot3_INITIALISE_WriteQue_Client_InputSend().%n");
         try {
-            _stat_PGM_WriteQue_Simulation_OutputSamples = WriteQue_Simulation_OutputSamples.app_FUNCT_generate_Program();
+            stat_PGM_WriteQue_Simulation_OutputSamples = WriteQue_Simulation_OutputSamples.app_FUNCT_generate_Program();
         }
         catch (NullPointerException e) {
             System.out.printf("NullPointerException.%n");

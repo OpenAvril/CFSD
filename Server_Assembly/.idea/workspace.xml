@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa0cde0f-09af-4e13-9791-aeb5fdb644a7" name="Changes" comment="DEVELOPMENT_2026_11_08_1555, &lt;COMPILE_SUCCESS&gt; &lt;RUNTIME_DEV&gt;.&#10;&#10;PHASE: *Design*, **Implementation**, Testing, Review.&#10;BUILD: DEVELOPMENT_2026_11_08_1555.&#10;PROJECT: Server_Assembly.&#10;&#10;IMPLEMENTED:&#10; -&#10;   &#10;TODO:&#10; -&#10; &#10;---&#10;---">
-      <change beforePath="$PROJECT_DIR$/src/main/java/engine/Framework.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/engine/Framework.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/threads/Thread_InputListen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/independent/threads/Thread_InputListen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/threads/Thread_OutputRespond.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/independent/threads/Thread_OutputRespond.java" afterDir="false" />
+    <list default="true" id="fa0cde0f-09af-4e13-9791-aeb5fdb644a7" name="Changes" comment="DEVELOPMENT_2026_11_08_1616, &lt;COMPILE_SUCCESS&gt; &lt;RUNTIME_DEV&gt;.&#10;---&#10;---&#10;PHASE: *Design*, **Implementation**, Testing, Review.&#10;&#10;BUILD: DEVELOPMENT_2026_11_08_1616.&#10;&#10;PROJECT: Server_Assembly.&#10;---&#10;___&#10;&#10;IMPLEMENTED:&#10; -&#10;   &#10;TODO:&#10; - PROJECT: Server_Assembly.&#10;   - FOLDER: OpenCFSD_Java_Assembly&#10;     - Main.cpp&#10;   - FOLDER: engine.&#10;     - Framework.java&#10;   - FOLDER: independent.&#10;     - FOLDER: praise_sets.&#10;       - &#10;     - FOLDER: threads.&#10;       - Thread_InputListen.java&#10;       - Thread_OutputRespond.java&#10;   - FOLDER: libs.&#10;     -&#10;   - FOLDER: SIMULATION.&#10;     - Simulation.java&#10;---&#10;---">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +85,7 @@
       <workItem from="1793791130867" duration="2048000" />
       <workItem from="1793846661257" duration="17000" />
       <workItem from="1793865260819" duration="1922000" />
-      <workItem from="1794117029348" duration="1403000" />
+      <workItem from="1794117029348" duration="2855000" />
     </task>
     <task id="LOCAL-00001" summary="DEVELOPMENT_2026_11_04_2119, &lt;COMPILE_SUCCESS&gt; &lt;RUNTIME_DEV&gt;.&#10;PHASE: *Design*, **Implementation**, Testing, Review.&#10;BUILD: DEVELOPMENT_2026_11_04_2119&#10;&#10;IMPLEMENTED:&#10; - LIBRARIES:&#10;   - CLIB_MuteQue.&#10;   - CLIB_LaunchQue.&#10;   - CLIB_Epicentre.&#10; - Framework.java&#10;&#10;TODO:">
       <option name="closed" value="true" />
@@ -129,7 +127,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794117404823</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="DEVELOPMENT_2026_11_08_1616, &lt;COMPILE_SUCCESS&gt; &lt;RUNTIME_DEV&gt;.&#10;---&#10;---&#10;PHASE: *Design*, **Implementation**, Testing, Review.&#10;&#10;BUILD: DEVELOPMENT_2026_11_08_1616.&#10;&#10;PROJECT: Server_Assembly.&#10;---&#10;___&#10;&#10;IMPLEMENTED:&#10; -&#10;   &#10;TODO:&#10; - PROJECT: Server_Assembly.&#10;   - FOLDER: OpenCFSD_Java_Assembly&#10;     - Main.cpp&#10;   - FOLDER: engine.&#10;     - Framework.java&#10;   - FOLDER: independent.&#10;     - FOLDER: praise_sets.&#10;       - &#10;     - FOLDER: threads.&#10;       - Thread_InputListen.java&#10;       - Thread_OutputRespond.java&#10;   - FOLDER: libs.&#10;     -&#10;   - FOLDER: SIMULATION.&#10;     - Simulation.java&#10;---&#10;---">
+      <option name="closed" value="true" />
+      <created>1794118650487</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1794118650487</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +146,7 @@
     <MESSAGE value="DEVELOPMENT_2026_11_05_1759, &lt;COMPILE_SUCCESS&gt; &lt;RUNTIME_DEV&gt;.&#10;&#10;PHASE: *Design*, **Implementation**, Testing, Review.&#10;BUILD: DEVELOPMENT_2026_11_05_1759.&#10;&#10;IMPLEMENTED:&#10; - LIBRARIES:&#10;   - CLIB_MuteQue v1.1.1.&#10;   - CLIB_Semisphore v1.1.1.&#10;   - CLIB_LaunchQue v1.1.1.&#10;   - CLIB_Epicentre v1.1.1.&#10; - Java : CFSD_Server_Assembly.&#10;   - Framework.java&#10;   -&#10;   &#10;TODO:&#10; - Java : CFSD_Server_Assembly.&#10;   -&#10;&#10;---" />
     <MESSAGE value="DEVELOPMENT_2026_11_05_1805, &lt;COMPILE_SUCCESS&gt; &lt;RUNTIME_DEV&gt;.&#10;&#10;PHASE: *Design*, **Implementation**, Testing, Review.&#10;BUILD: DEVELOPMENT_2026_11_05_1805.&#10;&#10;IMPLEMENTED:&#10; - LIBRARIES:&#10;   - CLIB_MuteQue v1.1.1.&#10;   - CLIB_Semisphore v1.1.1.&#10;   - CLIB_LaunchQue v1.1.1.&#10;   - CLIB_Epicentre v1.1.1.&#10; - Java : CFSD_Server_Assembly.&#10;   - Framework.java&#10;   -&#10;   &#10;TODO:&#10; - Java : CFSD_Server_Assembly.&#10;   -&#10;&#10;---" />
     <MESSAGE value="DEVELOPMENT_2026_11_08_1555, &lt;COMPILE_SUCCESS&gt; &lt;RUNTIME_DEV&gt;.&#10;&#10;PHASE: *Design*, **Implementation**, Testing, Review.&#10;BUILD: DEVELOPMENT_2026_11_08_1555.&#10;PROJECT: Server_Assembly.&#10;&#10;IMPLEMENTED:&#10; -&#10;   &#10;TODO:&#10; -&#10; &#10;---&#10;---" />
-    <option name="LAST_COMMIT_MESSAGE" value="DEVELOPMENT_2026_11_08_1555, &lt;COMPILE_SUCCESS&gt; &lt;RUNTIME_DEV&gt;.&#10;&#10;PHASE: *Design*, **Implementation**, Testing, Review.&#10;BUILD: DEVELOPMENT_2026_11_08_1555.&#10;PROJECT: Server_Assembly.&#10;&#10;IMPLEMENTED:&#10; -&#10;   &#10;TODO:&#10; -&#10; &#10;---&#10;---" />
+    <MESSAGE value="DEVELOPMENT_2026_11_08_1616, &lt;COMPILE_SUCCESS&gt; &lt;RUNTIME_DEV&gt;.&#10;---&#10;---&#10;PHASE: *Design*, **Implementation**, Testing, Review.&#10;&#10;BUILD: DEVELOPMENT_2026_11_08_1616.&#10;&#10;PROJECT: Server_Assembly.&#10;---&#10;___&#10;&#10;IMPLEMENTED:&#10; -&#10;   &#10;TODO:&#10; - PROJECT: Server_Assembly.&#10;   - FOLDER: OpenCFSD_Java_Assembly&#10;     - Main.cpp&#10;   - FOLDER: engine.&#10;     - Framework.java&#10;   - FOLDER: independent.&#10;     - FOLDER: praise_sets.&#10;       - &#10;     - FOLDER: threads.&#10;       - Thread_InputListen.java&#10;       - Thread_OutputRespond.java&#10;   - FOLDER: libs.&#10;     -&#10;   - FOLDER: SIMULATION.&#10;     - Simulation.java&#10;---&#10;---" />
+    <option name="LAST_COMMIT_MESSAGE" value="DEVELOPMENT_2026_11_08_1616, &lt;COMPILE_SUCCESS&gt; &lt;RUNTIME_DEV&gt;.&#10;---&#10;---&#10;PHASE: *Design*, **Implementation**, Testing, Review.&#10;&#10;BUILD: DEVELOPMENT_2026_11_08_1616.&#10;&#10;PROJECT: Server_Assembly.&#10;---&#10;___&#10;&#10;IMPLEMENTED:&#10; -&#10;   &#10;TODO:&#10; - PROJECT: Server_Assembly.&#10;   - FOLDER: OpenCFSD_Java_Assembly&#10;     - Main.cpp&#10;   - FOLDER: engine.&#10;     - Framework.java&#10;   - FOLDER: independent.&#10;     - FOLDER: praise_sets.&#10;       - &#10;     - FOLDER: threads.&#10;       - Thread_InputListen.java&#10;       - Thread_OutputRespond.java&#10;   - FOLDER: libs.&#10;     -&#10;   - FOLDER: SIMULATION.&#10;     - Simulation.java&#10;---&#10;---" />
   </component>
 </project>

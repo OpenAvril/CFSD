@@ -4,9 +4,9 @@ import java.io.IOException;
 
 public class App
 {
-    private static Algorithms _stat_CLASS_Algorithms;
-    private static Data _stat_CLASS_Data;
-    private static Execute _stat_CLASS_Execute;
+    private static Algorithms stat_CLASS_Algorithms;
+    private static Data stat_CLASS_Data;
+    private static Execute stat_CLASS_Execute;
 // public.
     public App(Framework obj) {
         System.out.printf("entered CONSTRUCTOR App().%n");
@@ -77,25 +77,25 @@ public class App
     private static void boot1_CLASS_DEFINE_Algorithms()
     {
         System.out.printf("entered boot1_CLASS_DEFINE_Algorithms().%n");
-        _stat_CLASS_Algorithms = null;
+        stat_CLASS_Algorithms = null;
         System.out.printf("exiting boot1_CLASS_DEFINE_Algorithms().%n");
     }
     private static void boot1_CLASS_DEFINE_Data()
     {
         System.out.printf("entered boot1_CLASS_DEFINE_Data().%n");
-        _stat_CLASS_Data = null;
+        stat_CLASS_Data = null;
         System.out.printf("exiting boot1_CLASS_DEFINE_Data().%n");
     }
     private static void boot1_CLASS_DEFINE_Execute()
     {
         System.out.printf("entered boot1_CLASS_DEFINE_Execute().%n");
-        _stat_CLASS_Execute = null;
+        stat_CLASS_Execute = null;
         System.out.printf("exiting boot1_CLASS_DEFINE_Execute().%n");
     }
     private static void boot3_CLASS_INITIALISE_Algorithms()
     {
         System.out.printf("entered boot3_CLASS_INITIALISE_Algorithms().%n");
-        _stat_CLASS_Algorithms = new Algorithms();
+        stat_CLASS_Algorithms = new Algorithms();
         try {
                 stat_CLASS_get_Algorithms();
         } 
@@ -107,7 +107,7 @@ public class App
     private static void boot3_CLASS_INITIALISE_Data()
     {
         System.out.printf("entered boot3_CLASS_INITIALISE_Data().%n");
-        _stat_CLASS_Data = new Data();
+        stat_CLASS_Data = new Data();
         try {
                 stat_CLASS_get_Data();
         } 
@@ -118,7 +118,7 @@ public class App
     }
     private static void boot3_CLASS_INITIALISE_Execute(Framework obj) {
         System.out.printf("entered boot3_CLASS_INITIALISE_Execute().%n");
-        _stat_CLASS_Execute = new Execute(obj);
+        stat_CLASS_Execute = new Execute(obj);
         try {
                 stat_CLASS_get_Execute();
         } 
@@ -129,14 +129,14 @@ public class App
     }
     private static Algorithms stat_CLASS_get_Algorithms()
     {
-        return _stat_CLASS_Algorithms;
+        return stat_CLASS_Algorithms;
     }
     private static Data stat_CLASS_get_Data()
     {
-        return _stat_CLASS_Data;
+        return stat_CLASS_Data;
     }
     private static Execute stat_CLASS_get_Execute()
     {
-        return _stat_CLASS_Execute;
+        return stat_CLASS_Execute;
     }
 }

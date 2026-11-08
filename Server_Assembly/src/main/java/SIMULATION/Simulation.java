@@ -14,34 +14,34 @@ import independent.praise_sets.Output_praise3;
 import java.util.Scanner;
 public class Simulation
 {
-    public static Input _SIMstat_REG_input_Sample;
-    public static Output _SIMstat_REG_output_Sample;
-    private static boolean[] _SIMstat_REG_PraiseStarted;
-    private static boolean[] _SIMstat_REG_PraiseComplete;
+    public static Input SIMstat_REG_input_Sample;
+    public static Output SIMstat_REG_output_Sample;
+    private static boolean[] SIMstat_REG_PraiseStarted;
+    private static boolean[] SIMstat_REG_PraiseComplete;
     private static Scanner stat_REG_scanner;
-    public Simulation(byte sysThreadId, Framework obj, Input _DEFAULT_inputSample, Output _DEFAULT_outputSample)
+    public Simulation(byte sysThreadId, Framework obj, Input DEFAULT_inputSample, Output DEFAULT_outputSample)
     {
-        _SIMstat_REG_input_Sample = null;
-        _SIMstat_REG_input_Sample = _DEFAULT_inputSample;
-        _SIMstat_REG_input_Sample.dyn_REG_boot2_SUBSTANTIATE_Input();
-        _SIMstat_REG_input_Sample.dyn_REG_boot3_INITIALISE_Input(obj.dyn_STRUCT_get_User_Input(sysThreadId));
-        _SIMstat_REG_input_Sample = _DEFAULT_inputSample;
-        _SIMstat_REG_output_Sample = null;
-        _SIMstat_REG_output_Sample = _DEFAULT_outputSample;
-        _SIMstat_REG_output_Sample.dyn_REG_boot2_SUBSTANTIATE_Output();
-        _SIMstat_REG_output_Sample.dyn_REG_boot3_INITIALISE_Output(obj.dyn_STRUCT_get_User_Output(sysThreadId));
-        _SIMstat_REG_output_Sample = _DEFAULT_outputSample;
-        _SIMstat_REG_PraiseStarted = null;
-        _SIMstat_REG_PraiseStarted = new boolean[4];
-        _SIMstat_REG_PraiseComplete = null;
-        _SIMstat_REG_PraiseComplete = new boolean[4];
+        SIMstat_REG_input_Sample = null;
+        SIMstat_REG_input_Sample = DEFAULT_inputSample;
+        SIMstat_REG_input_Sample.dyn_REG_boot2_SUBSTANTIATE_Input();
+        SIMstat_REG_input_Sample.dyn_REG_boot3_INITIALISE_Input(obj.dyn_STRUCT_get_User_Input(sysThreadId));
+        SIMstat_REG_input_Sample = DEFAULT_inputSample;
+        SIMstat_REG_output_Sample = null;
+        SIMstat_REG_output_Sample = DEFAULT_outputSample;
+        SIMstat_REG_output_Sample.dyn_REG_boot2_SUBSTANTIATE_Output();
+        SIMstat_REG_output_Sample.dyn_REG_boot3_INITIALISE_Output(obj.dyn_STRUCT_get_User_Output(sysThreadId));
+        SIMstat_REG_output_Sample = DEFAULT_outputSample;
+        SIMstat_REG_PraiseStarted = null;
+        SIMstat_REG_PraiseStarted = new boolean[4];
+        SIMstat_REG_PraiseComplete = null;
+        SIMstat_REG_PraiseComplete = new boolean[4];
         for(int i=0; i< Global.dyn_REG_get_numberOfPraises(sysThreadId); i++) {
-            _SIMstat_REG_PraiseStarted[i] = true;
-            _SIMstat_REG_PraiseComplete[i] = true;
+            SIMstat_REG_PraiseStarted[i] = true;
+            SIMstat_REG_PraiseComplete[i] = true;
         }
         for(int i=0; i< Global.dyn_REG_get_numberOfPraises(sysThreadId); i++) {
-            _SIMstat_REG_PraiseStarted[i] = false;
-            _SIMstat_REG_PraiseComplete[i] = false;
+            SIMstat_REG_PraiseStarted[i] = false;
+            SIMstat_REG_PraiseComplete[i] = false;
         }
         stat_REG_scanner = null;
         stat_REG_scanner = new Scanner(System.in);
@@ -81,7 +81,7 @@ public class Simulation
                     WriteQue_ConditionCode.app_FUNCT_write_End(1);
                     System.out.printf("thread " + threadId + " :: WriteQue : CC : close access @ 1%n");//todo SIMULATION
                     if(!doneOnce2) {
-                        _SIMstat_REG_input_Sample = obj.dyn_STRUCT_get_Input();
+                        SIMstat_REG_input_Sample = obj.dyn_STRUCT_get_Input();
                         for(long praiseIdIndex = 0; praiseIdIndex < 4; praiseIdIndex++) {
                             while (obj.dyn_STRUCT_get_IO_ListenRespond().dyn_REG_get_flag__isNewInputReady()) {
 
@@ -92,9 +92,9 @@ public class Simulation
                             System.out.printf("thread " + threadId + " :: SIM IN <=%n");//todo SIMULATION
                             System.out.printf("thread " + threadId + " :: SIM IN <=%n");//todo SIMULATION
                             System.out.printf("thread " + threadId + " :: SIM IN <=%n");//todo SIMULATION
-                            _SIMstat_REG_input_Sample.dyn_REG_set_Input_praiseId(praiseIdIndex);//todo process of input
-                            System.out.printf("thread " + threadId + " :: <= : PraiseEventId: " + _SIMstat_REG_input_Sample.dyn_REG_get_Input_praiseId() + ".%n");//todo SIMULATION
-                            _SIMstat_REG_input_Sample.dyn_REG_set_InputSubset(obj, _SIMstat_REG_input_Sample.dyn_REG_get_Input_praiseId());//todo process of input
+                            SIMstat_REG_input_Sample.dyn_REG_set_Input_praiseId(praiseIdIndex);//todo process of input
+                            System.out.printf("thread " + threadId + " :: <= : PraiseEventId: " + SIMstat_REG_input_Sample.dyn_REG_get_Input_praiseId() + ".%n");//todo SIMULATION
+                            SIMstat_REG_input_Sample.dyn_REG_set_InputSubset(obj, SIMstat_REG_input_Sample.dyn_REG_get_Input_praiseId());//todo process of input
                             Input_praise0 subset_of_SIM_input_for_praise0 = null;
                             Input_praise1 subset_of_SIM_input_for_praise1 = null;
                             Input_praise2 subset_of_SIM_input_for_praise2 = null;
@@ -253,7 +253,7 @@ public class Simulation
                             WriteQue_ConditionCode.app_FUNCT_write_Start(1);
                             System.out.printf("thread " + threadId + " :: WriteQue : CC : open access @ 1%n");//todo SIMULATION
                             //obj.dyn_CLASS_get_App().dyn_CLASS_get_Execute().dyn_CLASS_get_Execute_Control().dyn_REG_set_Flag_isWaitingOnPraiseReturn(_SIMstat_REG_input_Sample.dyn_REG_get_Input_praiseId(), true);
-                            _SIMstat_REG_PraiseStarted[Math.toIntExact(_SIMstat_REG_input_Sample.dyn_REG_get_Input_praiseId())] = true;//todo SIMULATION
+                            SIMstat_REG_PraiseStarted[Math.toIntExact(_SIMstat_REG_input_Sample.dyn_REG_get_Input_praiseId())] = true;//todo SIMULATION
                             obj.dyn_STRUCT_get_IO_ListenRespond().dyn_REG_set_flag__isNewInputReady(true);
                             System.out.printf("thread " + threadId + " :: => CC : dyn_REG_set_flag__isNewInputReady(" + obj.dyn_STRUCT_get_IO_ListenRespond().dyn_REG_get_flag__isNewInputReady() + ")%n");//todo SIMULATION
                             WriteQue_ConditionCode.app_FUNCT_write_End(1);
@@ -319,15 +319,15 @@ public class Simulation
                     System.out.printf("thread " + threadId + " :: <= CC : stat_REG_get_flag__isNewInputReady() = " + obj.dyn_STRUCT_get_IO_ListenRespond().dyn_REG_get_flag__isNewOutputReady() + "%n");//todo SIMULATION
                     WriteQue_ConditionCode.app_FUNCT_write_Start(2);
                     System.out.printf("thread " + threadId + " :: WriteQue : CC : open access @ 2%n");//todo SIMULATION
-                    _SIMstat_REG_output_Sample = obj.dyn_STRUCT_get_Output();
-                    _SIMstat_REG_output_Sample = obj.dyn_STRUCT_get_IO_ListenRespond().dyn_REG_get_Buffer__Ouput();
+                    SIMstat_REG_output_Sample = obj.dyn_STRUCT_get_Output();
+                    SIMstat_REG_output_Sample = obj.dyn_STRUCT_get_IO_ListenRespond().dyn_REG_get_Buffer__Ouput();
                     System.out.printf("thread " + threadId + " :: SIM OUT =>%n");
                     System.out.printf("thread " + threadId + " :: SIM OUT =>%n");
                     System.out.printf("thread " + threadId + " :: SIM OUT =>%n");
                     System.out.printf("thread " + threadId + " :: SIM OUT =>%n");
                     System.out.printf("thread " + threadId + " :: SIM OUT =>%n");
                     System.out.printf("thread " + threadId + " :: SIM OUT =>%n");
-                    System.out.printf("thread " + threadId + " :: <= : PraiseEventId: " + _SIMstat_REG_output_Sample.dyn_REG_get_Output_praiseId() + ".%n");
+                    System.out.printf("thread " + threadId + " :: <= : PraiseEventId: " + SIMstat_REG_output_Sample.dyn_REG_get_Output_praiseId() + ".%n");
                     int[] thread_Listen_switch_D = null;
                     thread_Listen_switch_D = new int[2];
                     thread_Listen_switch_D = Global.stat_CONVERT_Long_To_twoInts(_SIMstat_REG_output_Sample.dyn_REG_get_Output_praiseId());
@@ -342,7 +342,7 @@ public class Simulation
                                 case 0:
                                     double result0 = Double.MAX_VALUE;
                                     try {
-                                        output_subset0 = (Output_praise0) _SIMstat_REG_output_Sample.dyn_REG_get_OutputSubset();
+                                        output_subset0 = (Output_praise0) SIMstat_REG_output_Sample.dyn_REG_get_OutputSubset();
                                         result0 = output_subset0.dyn_REG_get_output_praise0_value();
                                     } catch (NullPointerException e) {
                                         System.out.printf("thread " + threadId + " :: NullPointerException.%n");
@@ -357,7 +357,7 @@ public class Simulation
                                 case 1:
                                     double result1 = Double.MAX_VALUE;
                                     try {
-                                        output_subset1 = (Output_praise1) _SIMstat_REG_output_Sample.dyn_REG_get_OutputSubset();
+                                        output_subset1 = (Output_praise1) SIMstat_REG_output_Sample.dyn_REG_get_OutputSubset();
                                         result1 = output_subset1.dyn_REG_get_output_praise1_value();
                                     } catch (NullPointerException e) {
                                         System.out.printf("thread " + threadId + " :: NullPointerException.%n");
@@ -372,7 +372,7 @@ public class Simulation
                                 case 2:
                                     double result2 = Double.MAX_VALUE;
                                     try {
-                                        output_subset2 = (Output_praise2) _SIMstat_REG_output_Sample.dyn_REG_get_OutputSubset();
+                                        output_subset2 = (Output_praise2) SIMstat_REG_output_Sample.dyn_REG_get_OutputSubset();
                                         result2 = output_subset2.dyn_REG_get_output_praise2_value();
                                     } catch (NullPointerException e) {
                                         System.out.printf("thread " + threadId + " :: NullPointerException.%n");
@@ -387,7 +387,7 @@ public class Simulation
                                 case 3:
                                     double result3 = Double.MAX_VALUE;
                                     try {
-                                        output_subset3 = (Output_praise3) _SIMstat_REG_output_Sample.dyn_REG_get_OutputSubset();
+                                        output_subset3 = (Output_praise3) SIMstat_REG_output_Sample.dyn_REG_get_OutputSubset();
                                         result3 = output_subset3.dyn_REG_get_output_praise3_value();
                                     } catch (NullPointerException e) {
                                         System.out.printf("thread " + threadId + " :: NullPointerException.%n");
@@ -483,7 +483,7 @@ public class Simulation
                     System.out.printf("thread " + threadId + " :: WriteQue : CC : open access @ 2%n");//todo SIMULATION
                     obj.dyn_CLASS_get_App().dyn_CLASS_get_Execute().dyn_CLASS_get_Execute_Control().dyn_REG_set_Flag_isWaitingOnPraiseReturn(_SIMstat_REG_output_Sample.dyn_REG_get_Output_praiseId(), false);
                     if(_SIMstat_REG_output_Sample.dyn_REG_get_Output_praiseId() != Integer.MIN_VALUE) {
-                        _SIMstat_REG_PraiseComplete[(int)_SIMstat_REG_output_Sample.dyn_REG_get_Output_praiseId()] = true;
+                        SIMstat_REG_PraiseComplete[(int)_SIMstat_REG_output_Sample.dyn_REG_get_Output_praiseId()] = true;
                         obj.dyn_STRUCT_get_IO_ListenRespond().dyn_REG_set_flag__isNewOutputReady(false);
                         System.out.printf("thread " + threadId + " :: => CC : isNewOutputReady(" + obj.dyn_STRUCT_get_IO_ListenRespond().dyn_REG_get_flag__isNewOutputReady() + ")%n");//todo SIMULATION
                     }
@@ -551,19 +551,19 @@ public class Simulation
         stat_CLASS_boot1_DEFINE_SIMULATION_stat_REG_input_Sample();
     }
     private static void stat_CLASS_boot1_DEFINE_SIMULATION_stat_REG_input_Sample() {
-        _SIMstat_REG_input_Sample = null;
+        SIMstat_REG_input_Sample = null;
     }
     public void stat_REG_boot2_SUBSTANTIATE__SIMULATION(Input sample) {
         stat_REG_boot2_SUBSTANTIATE__SIMULATION__SIMstat_REG_input_Sample(sample);
     }
     private static void stat_REG_boot2_SUBSTANTIATE__SIMULATION__SIMstat_REG_input_Sample(Input sample) {
         sample.dyn_REG_boot2_SUBSTANTIATE_Input();
-        _SIMstat_REG_input_Sample = sample;
+        SIMstat_REG_input_Sample = sample;
     }
     public void stat_REG_boot3_INITIALISE__SIMULATION(Input sample) {
         stat_REG_boot3_INITIALISE__SIMULATION__SIMstat_REG_input_Sample(sample);
     }
     private static void stat_REG_boot3_INITIALISE__SIMULATION__SIMstat_REG_input_Sample(Input sample) {
-        _SIMstat_REG_input_Sample = sample;
+        SIMstat_REG_input_Sample = sample;
     }
 }

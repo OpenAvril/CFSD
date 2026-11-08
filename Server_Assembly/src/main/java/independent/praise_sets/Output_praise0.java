@@ -2,7 +2,7 @@ package independent.praise_sets;
 import engine.Framework;
 public class Output_praise0
 {
-    private static double _output_praise0_value;
+    private static double output_praise0_value;
     // public.
     public void dyn_REG_boot1_DEFINE_Output_praise0(byte sysThreadId, Framework obj)
     {
@@ -65,21 +65,21 @@ public class Output_praise0
     private static void stat_REG_boot2_SUBSTANTIATE_Output_value()
     {
         System.out.printf("entered stat_REG_boot2_SUBSTANTIATE_Output_valueA().%n");
-        _output_praise0_value = (double)(Double.MAX_VALUE);
+        output_praise0_value = (double)(Double.MAX_VALUE);
         System.out.printf("exiting stat_REG_boot2_SUBSTANTIATE_Output_valueA().%n");
     }
     private static void stat_REG_boot3_INITIALISE_Output_value()
     {
         System.out.printf("entered stat_REG_boot3_INITIALISE_Output_valueA().%n");
-        _output_praise0_value = (double)(0.0);
+        output_praise0_value = (double)(0.0);
         System.out.printf("exiting stat_REG_boot3_INITIALISE_Output_valueA().%n");
     }
     private static double stat_REG_get_output_praise0_value()
     {
-        return _output_praise0_value;
+        return output_praise0_value;
     }
     private static void stat_REG_set_output_praise0_value(double newDouble)
     {
-        _output_praise0_value = newDouble;
+        output_praise0_value = newDouble;
     }
 }

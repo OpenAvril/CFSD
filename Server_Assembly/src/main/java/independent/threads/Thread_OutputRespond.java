@@ -145,8 +145,8 @@ public class Thread_OutputRespond {
         if (obj.dyn_STRUCT_get_IO_ListenRespond().dyn_REG_get_flag__isNewInputReady()) {
             System.out.printf("thread " + threadId + " :: <= CC : stat_REG_get_flag__isNewInputReady() => " + obj.dyn_STRUCT_get_IO_ListenRespond().dyn_REG_get_flag__isNewInputReady() + "%n");//todo SIMULATION
             //stat_REG_Buffer_For_Input = obj.dyn_STRUCT_get_Input();
-            //stat_App_Decode_NetworkingSteam_At_Server_Input_Recieve(obj, _SIMstat_REG_input_Sample, stat_REG_get_Buffer__Input());//todo SIMULATION undo
-            stat_REG_Buffer_For_Input = _SIMstat_REG_input_Sample;//todo SIMULATION
+            //stat_App_Decode_NetworkingSteam_At_Server_Input_Recieve(obj, SIMstat_REG_input_Sample, stat_REG_get_Buffer__Input());//todo SIMULATION undo
+            stat_REG_Buffer_For_Input = SIMstat_REG_input_Sample;//todo SIMULATION
             WriteQue_ConditionCode.app_FUNCT_write_End(0);
             System.out.printf("thread " + threadId + " :: WriteQue : CC : close access @ 0.%n");//todo SIMULATION
             OpenEpiCentre.CLIBConcurrentServerIO__dyn_PGM_WriteEnableStack_ServerInputReceive_Injection__write_Start();
@@ -504,7 +504,7 @@ public class Thread_OutputRespond {
                 obj.dyn_STRUCT_get_IO_ListenRespond().dyn_REG_set_flag__isNewOutputReady(true);
                 System.out.printf("thread " + threadId + " :: WriteQue : CC : close access @ 0%n");//todo SIMULATION
                 WriteQue_ConditionCode.app_FUNCT_write_End(0);
-                //stat_App_Encode_NetworkingSteam_At_Server_Output_Send(obj, _SIMstat_REG_output_Sample, stat_REG_get_Buffer__Ouput());//todo SIMULATION
+                //stat_App_Encode_NetworkingSteam_At_Server_Output_Send(obj, SIMstat_REG_output_Sample, stat_REG_get_Buffer__Ouput());//todo SIMULATION
             } else {
                 System.out.printf("thread " + threadId + " :: WriteQue : CC : close access @ 0%n");//todo SIMULATION
                 WriteQue_ConditionCode.app_FUNCT_write_End(0);

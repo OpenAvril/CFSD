@@ -8,8 +8,8 @@ import static SIMULATION.Simulation._SIM_stat_REG_input_Sample;
 
 public class Global
 {
-    private static long _stat_REG_numberOfCores;
-    private static long _stat_REG_numberOfPraises;
+    private static long stat_REG_numberOfCores;
+    private static long stat_REG_numberOfPraises;
     // public.
     public Global()
     {
@@ -253,26 +253,26 @@ public class Global
     // private.
     private static void stat_REG_boot2_SUBSTANTIATE_numberOfCores()
     {
-        _stat_REG_numberOfCores = Integer.MAX_VALUE;
+        stat_REG_numberOfCores = Integer.MAX_VALUE;
     }
     private static void stat_REG_boot2_SUBSTANTIATE_numberOfPraises()
     {
-        _stat_REG_numberOfPraises = Integer.MAX_VALUE;
+        stat_REG_numberOfPraises = Integer.MAX_VALUE;
     }
     private static void stat_REG_boot3_INITIALISE_numberOfCores()
     {
-        _stat_REG_numberOfCores = 3;
+        stat_REG_numberOfCores = 3;
     }
     private static void stat_REG_boot3_INITIALISE_numberOfPraises()
     {
-        _stat_REG_numberOfPraises = 4;
+        stat_REG_numberOfPraises = 4;
     }
     private static long stat_REG_get_numberOfCores()
     {
-        return _stat_REG_numberOfCores;
+        return stat_REG_numberOfCores;
     }
     private static long stat_REG_get_numberOfPraises()
     {
-        return _stat_REG_numberOfPraises;
+        return stat_REG_numberOfPraises;
     }
 }
