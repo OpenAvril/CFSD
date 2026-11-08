@@ -18,7 +18,7 @@ public class Framework
     private static Simulation SIMULATION;
     // public.
     public Framework(byte sysThreadId) {
-        System.out.printf("thread " + sysThreadId + "thread " + sysThreadId + " :: entered CONSTRUCTOR Framework(sysThreadId)" + ".%n");
+        System.out.printf("thread " + sysThreadId + " :: entered CONSTRUCTOR Framework(sysThreadId)" + ".%n");
         stat_CLASS_boot0_DECLAIRE_Framework(sysThreadId);
         stat_REG_boot0_DECLAIRE_Framework(sysThreadId);
 

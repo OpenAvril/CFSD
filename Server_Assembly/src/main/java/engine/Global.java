@@ -1,58 +1,46 @@
 package engine;
 import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
-import java.util.BitSet;
-import java.util.FormatFlagsConversionMismatchException;
-
-import static SIMULATION.Simulation._SIM_stat_REG_input_Sample;
-
 public class Global
 {
-    private static long stat_REG_numberOfCores;
-    private static long stat_REG_numberOfPraises;
+    private static byte stat_REG_NUMBER_OF_THREADS;
+    private static long stat_REG_NUMBER_OF_PRAISES;
     // public.
-    public Global(byte sysThreadId)
-    {
-         System.out.printf("thread " + sysThreadId + "entering Global()%n");
-        stat_CLASS_boot0_DECLAIRE_Global();
-        stat_CLASS_boot1_DEFINE_Global();
-        stat_CLASS_boot3_INITIALISE_Global();
-        stat_REG_boot0_DECLAIRE_Global();
-         System.out.printf("thread " + sysThreadId + "exiting Global()%n");
+    public Global(byte sysThreadId) {
+        System.out.printf("thread " + sysThreadId + "entering Global()%n");
+        stat_CLASS_boot0_DECLAIRE_Global(sysThreadId);
+        stat_CLASS_boot1_DEFINE_Global(sysThreadId);
+        stat_CLASS_boot3_INITIALISE_Global(sysThreadId);
+        stat_REG_boot0_DECLAIRE_Global(sysThreadId);
+        System.out.printf("thread " + sysThreadId + "exiting Global()%n");
     }
-    public void dyn_REG_boot1_DEFINE_Global(byte sysThreadId)
-    {
-         System.out.printf("thread " + sysThreadId + "entered dyn_REG_boot1_DEFINE_Global()" + ".%n");
-
-         System.out.printf("thread " + sysThreadId + "exiting dyn_REG_boot1_DEFINE_Global()" + ".%n");
+    public static void dyn_REG_boot1_DEFINE_Global(byte sysThreadId) {
+        System.out.printf("thread " + sysThreadId + " :: entered : Global : dyn_REG_boot1_DEFINE_Global(sysThreadId)" + ".%n");
+        System.out.printf("thread " + sysThreadId + " :: exiting : Global : dyn_REG_boot1_DEFINE_Global(sysThreadId)" + ".%n");
     }
-    public void dyn_REG_boot2_SUBSTANTIATE_Global(byte sysThreadId)
-    {
-         System.out.printf("thread " + sysThreadId + "entered dyn_REG_boot2_SUBSTANTIATE_Global()" + ".%n");
-        stat_REG_boot2_SUBSTANTIATE_numberOfCores();
-        stat_REG_boot2_SUBSTANTIATE_numberOfPraises();
-         System.out.printf("thread " + sysThreadId + "exiting dyn_REG_boot2_SUBSTANTIATE_Global()" + ".%n");
+    public static void dyn_REG_boot2_SUBSTANTIATE_Global(byte sysThreadId) {
+        System.out.printf("thread " + sysThreadId + " :: entered : Global : dyn_REG_boot2_SUBSTANTIATE_Global(sysThreadId)" + ".%n");
+        stat_REG_boot2_SUBSTANTIATE_NUMBER_OF_THREADS(sysThreadId);
+        stat_REG_boot2_SUBSTANTIATE_NUMBER_OF_PRAISES(sysThreadId);
+        System.out.printf("thread " + sysThreadId + " :: exiting : Global : dyn_REG_boot2_SUBSTANTIATE_Global(sysThreadId)" + ".%n");
     }
-    public void dyn_REG_boot3_INITIALISE_Global(byte sysThreadId)
-    {
-         System.out.printf("thread " + sysThreadId + "entered dyn_REG_boot3_INITIALISE_Global()" + ".%n");
-        stat_REG_boot3_INITIALISE_numberOfCores();
-        stat_REG_boot3_INITIALISE_numberOfPraises();
-         System.out.printf("thread " + sysThreadId + "exiting dyn_REG_boot3_INITIALISE_Global()" + ".%n");
+    public static void dyn_REG_boot3_INITIALISE_Global(byte sysThreadId) {
+        System.out.printf("thread " + sysThreadId + " :: entered : Global : dyn_REG_boot3_INITIALISE_Global(sysThreadId)" + ".%n");
+        stat_REG_boot3_INITIALISE_NUMBER_OF_THREADS(sysThreadId);
+        stat_REG_boot3_INITIALISE_NUMBER_OF_PRAISES(sysThreadId);
+        System.out.printf("thread " + sysThreadId + " :: exiting : Global : dyn_REG_boot3_INITIALISE_Global(sysThreadId)" + ".%n");
+        System.out.printf("thread " + sysThreadId + "exiting dyn_REG_boot3_INITIALISE_Global()" + ".%n");
     }
-    public void dyn_REG_boot4_INSTANTIATE_Global(byte sysThreadId)
-    {
-         System.out.printf("thread " + sysThreadId + "entered dyn_REG_boot4_INSTANTIATE_Global()" + ".%n");
-
-         System.out.printf("thread " + sysThreadId + "exiting dyn_REG_boot4_INSTANTIATE_Global()" + ".%n");
+    public static void dyn_REG_boot4_INSTANTIATE_Global(byte sysThreadId) {
+        System.out.printf("thread " + sysThreadId + " :: entered : Global : dyn_REG_boot4_INSTANTIATE_Global(sysThreadId)" + ".%n");
+        System.out.printf("thread " + sysThreadId + " :: exiting : Global : dyn_REG_boot4_INSTANTIATE_Global(sysThreadId)" + ".%n");
     }
-    public static long dyn_REG_get_numberOfCores(byte sysThreadId)
-    {
-        return stat_REG_get_numberOfCores();
+    public static byte stat_REG_get_NUMBER_OF_THREADS(byte sysThreadId) {
+        System.out.printf("thread " + sysThreadId + " :: <= byte : dyn_REG_get_numberOfCores(sysThreadId)" + ".%n");
+        return pr_stat_REG_get_NUMBER_OF_THREADS(sysThreadId);
     }
-    public static long dyn_REG_get_numberOfPraises(byte sysThreadId)
-    {
-        return stat_REG_get_numberOfPraises();
+    public static long stat_REG_get_NUMBER_OF_PRAISES(byte sysThreadId) {
+        System.out.printf("thread " + sysThreadId + " :: <= long : stat_REG_get_NUMBER_OF_PRAISES(sysThreadId)" + ".%n");
+        return pr_stat_REG_get_NUMBER_OF_PRAISES(sysThreadId);
     }
     public static byte[] stat_CONVERT_ByteArray_To_ReverseByteArray(byte sysThreadId, byte[] buffer) {
         byte[] temp = new byte[buffer.length];
@@ -84,9 +72,11 @@ public class Global
                 }
             }
         }
+        System.out.printf("thread " + sysThreadId + " :: <= byte[] : stat_CONVERT_ByteArray_To_ReverseByteArray(sysThreadId)" + ".%n");
         return temp;
     }
     public static byte[] stat_CONVERT_Boolean_To_ByteArray(byte sysThreadId, boolean bool) {
+        System.out.printf("thread " + sysThreadId + " :: <= byte[] : stat_CONVERT_Boolean_To_ByteArray(sysThreadId)" + ".%n");
         return new byte[] { (byte) (bool ? 1 : 0) };
     }
     public static boolean stat_CONVERT_ByteArray_To_Boolean(byte sysThreadId, byte[] bytesBool) {
@@ -95,85 +85,25 @@ public class Global
         if(bytesBool[0] != 0) {
             temp = true;
         }
+        System.out.printf("thread " + sysThreadId + " :: <= boolean : stat_CONVERT_ByteArray_To_Boolean(sysThreadId)" + ".%n");
         return temp;
     }
     public static double stat_CONVERT_ByteArray_To_Double(byte sysThreadId, byte[] byteArray) {
+        System.out.printf("thread " + sysThreadId + " :: <= double : stat_CONVERT_ByteArray_To_Double(sysThreadId)" + ".%n");
         return ByteBuffer.wrap(byteArray).getDouble();
-/*
-        double temp = Double.MAX_VALUE;
-        if (byteArray.length != 8) {
-            throw new IllegalArgumentException("Byte array must have exactly 8 bytes" + ".%n");
-        } else {
-            boolean[] bits = new boolean[64];
-            boolean[] exponent = new boolean[11];
-            boolean[] fraction = new boolean[52];
-            boolean sign = true;
-            int bitsId1 = 0;
-            for (int byteId1 = 0; byteId1 < 8; byteId1++) {
-                for (int bitId1 = 0; bitId1 < 8; bitId1++) {
-                    bitsId1 = ((byteId1 * 8) + bitId1);
-                    if (bitsId1 < 63) {
-                        bits[bitsId1] = ((byteArray[byteId1] >> bitId1) & 1) == 1;
-                    } else {
-                        bits[bitsId1] = false;
-                    }
-                }
-            }
-            int exponentId2 = 0;
-            int fractionId2 = 0;
-            int bitsId2 = 0;
-            for (int byteId2 = 0; byteId2 < 8; byteId2++) {
-                for (int bitId2 = 0; bitId2 < 8; bitId2++) {
-                    bitsId2 = ((byteId2*8) + bitId2);
-                    if (bitsId2 < 51) {
-                        fraction[fractionId2] = bits[63 - bitsId2];
-                        fractionId2++;
-                    } else if (bitsId2 > 51 && bitsId2 < 63) {
-                        exponent[exponentId2] = bits[63 - bitsId2];
-                        exponentId2++;
-                    } else if (bitsId2 == 63) {
-                        sign = false;
-                    }
-                }
-            }
-            int exponentId3 = 0;
-            int fractionId3 = 0;
-            int bitsId3 = 0;
-            for (int byteId3 = 0; byteId3 < 8; byteId3++) {
-                for (int bitId3 = 0; bitId3 < 8; bitId3++) {
-                    bitsId3 = ((byteId3 * 8) + bitId3);
-                    if (bitsId3 < 51) {
-                        bits[bitsId3] = fraction[fractionId3];
-                        fractionId3++;
-                    } else if (bitsId3 > 51 && bitsId3 < 63) {
-                        bits[bitsId3] = exponent[exponentId3];
-                        exponentId3++;
-                    } else if (bitsId3 == 63) {
-                        bits[bitsId3] = sign;
-                    }
-                }
-            }
-            long tempLong = 0L;
-            for (int i = 0; i < 64; i++) {
-                if (bits[i]) {
-                    tempLong |= (1L << i);
-                }
-            }
-            temp = Double.longBitsToDouble(tempLong);
-        }
-        return temp;
- */
     }
     public static long stat_CONVERT_ByteArray_To_Long(byte sysThreadId, byte[] byteArray) {
+        System.out.printf("thread " + sysThreadId + " :: <= long : stat_CONVERT_ByteArray_To_Long(sysThreadId)" + ".%n");
         return ByteBuffer.wrap(byteArray).getLong();
     }
     public static byte[] stat_CONVERT_Long_To_ByteArray(byte sysThreadId, long value) {
+        System.out.printf("thread " + sysThreadId + " :: <= byte[] : stat_CONVERT_Long_To_ByteArray(sysThreadId)" + ".%n");
         return ByteBuffer.allocate(Long.BYTES).putLong(value).array();
     }
     public static int[] stat_CONVERT_Long_To_twoInts(byte sysThreadId, long value) {
         int[] result = new int[2];
         if (value > 2305843009213693951L) {
-             System.out.printf("thread " + sysThreadId + "ERROR :: praiseId is to large for 2x 32-bit MUX(s), switched by a signed 32-bit integer" + ".%n");
+             System.out.printf("thread " + sysThreadId + "ERROR :: praiseId is to large for 2x 32-bit MUX && 31-bit MUX" + ".%n");
             result[0] = Integer.MIN_VALUE;
             result[1] = Integer.MIN_VALUE;
         } else {
@@ -218,61 +148,61 @@ public class Global
             result[0] = thread_Listen_switch_B;
             result[1] = thread_Listen_switch_C;
         }
+        System.out.printf("thread " + sysThreadId + " :: <= int[] : stat_CONVERT_Long_To_twoInts(sysThreadId)" + ".%n");
         return result;
     }
     public static byte[] stat_CONVERT_Double_To_ByteArray(byte sysThreadId, double value) {
+        System.out.printf("thread " + sysThreadId + " :: <= byte[] : stat_CONVERT_Double_To_ByteArray(sysThreadId)" + ".%n");
         return ByteBuffer.allocate(8).putDouble(value).array();
     }
     public static long stat_CONVERT_twoInts_To_Long(byte sysThreadId, int[] value) {
+        System.out.printf("thread " + sysThreadId + " :: <= long : stat_CONVERT_twoInts_To_Long(sysThreadId)" + ".%n");
+        //todo
         return 0;
     }
-    public static void stat_CLASS_boot0_DECLAIRE_Global(byte sysThreadId)
-    {
-         System.out.printf("thread " + sysThreadId + "entered stat_CLASS_boot0_DECLAIRE_Global()" + ".%n");
-
-         System.out.printf("thread " + sysThreadId + "exiting stat_CLASS_boot0_DECLAIRE_Global()" + ".%n");
+    public static void stat_CLASS_boot0_DECLAIRE_Global(byte sysThreadId) {
+        System.out.printf("thread " + sysThreadId + " :: entered : Global : stat_CLASS_boot0_DECLAIRE_Global(sysThreadId)" + ".%n");
+        System.out.printf("thread " + sysThreadId + " :: exiting : Global : stat_CLASS_boot0_DECLAIRE_Global(sysThreadId)" + ".%n");
     }
-    private static void stat_CLASS_boot1_DEFINE_Global(byte sysThreadId)
-    {
-         System.out.printf("thread " + sysThreadId + "entered stat_CLASS_boot1_DEFINE_Global()" + ".%n");
-
-         System.out.printf("thread " + sysThreadId + "exiting stat_CLASS_boot1_DEFINE_Global()" + ".%n");
+    private static void stat_CLASS_boot1_DEFINE_Global(byte sysThreadId) {
+        System.out.printf("thread " + sysThreadId + " :: entered : Global : stat_CLASS_boot1_DEFINE_Global(sysThreadId)" + ".%n");
+        System.out.printf("thread " + sysThreadId + " :: exiting : Global : stat_CLASS_boot1_DEFINE_Global(sysThreadId)" + ".%n");
     }
-    private static void stat_CLASS_boot3_INITIALISE_Global(byte sysThreadId)
-    {
-         System.out.printf("thread " + sysThreadId + "entered stat_CLASS_boot3_INITIALISE_Global()" + ".%n");
-
-         System.out.printf("thread " + sysThreadId + "exiting stat_CLASS_boot3_INITIALISE_Global()" + ".%n");
+    private static void stat_CLASS_boot3_INITIALISE_Global(byte sysThreadId) {
+        System.out.printf("thread " + sysThreadId + " :: entered : Global : stat_CLASS_boot3_INITIALISE_Global(sysThreadId)" + ".%n");
+        System.out.printf("thread " + sysThreadId + " :: exiting : Global : stat_CLASS_boot3_INITIALISE_Global(sysThreadId)" + ".%n");
     }
-    private static void stat_REG_boot0_DECLAIRE_Global(byte sysThreadId)
-    {
-         System.out.printf("thread " + sysThreadId + "entered stat_REG_boot0_DECLAIRE_Global()" + ".%n");
-
-         System.out.printf("thread " + sysThreadId + "exiting stat_REG_boot0_DECLAIRE_Global()" + ".%n");
+    private static void stat_REG_boot0_DECLAIRE_Global(byte sysThreadId) {
+        System.out.printf("thread " + sysThreadId + " :: entered : Global : stat_REG_boot0_DECLAIRE_Global(sysThreadId)" + ".%n");
+        System.out.printf("thread " + sysThreadId + " :: exiting : Global : stat_REG_boot0_DECLAIRE_Global(sysThreadId)" + ".%n");
     }
     // private.
-    private static void stat_REG_boot2_SUBSTANTIATE_numberOfCores(byte sysThreadId)
-    {
-        stat_REG_numberOfCores = Integer.MAX_VALUE;
+    private static void stat_REG_boot2_SUBSTANTIATE_NUMBER_OF_THREADS(byte sysThreadId) {
+        System.out.printf("thread " + sysThreadId + " :: entered : Global : stat_REG_boot2_SUBSTANTIATE_NUMBER_OF_THREADS(sysThreadId)" + ".%n");
+        stat_REG_NUMBER_OF_THREADS = Byte.MAX_VALUE;
+        System.out.printf("thread " + sysThreadId + " :: exiting : Global : stat_REG_boot2_SUBSTANTIATE_NUMBER_OF_THREADS(sysThreadId)" + ".%n");
     }
-    private static void stat_REG_boot2_SUBSTANTIATE_numberOfPraises(byte sysThreadId)
-    {
-        stat_REG_numberOfPraises = Integer.MAX_VALUE;
+    private static void stat_REG_boot2_SUBSTANTIATE_NUMBER_OF_PRAISES(byte sysThreadId) {
+        System.out.printf("thread " + sysThreadId + " :: entered : Global : stat_REG_boot2_SUBSTANTIATE_NUMBER_OF_PRAISES(sysThreadId)" + ".%n");
+        stat_REG_NUMBER_OF_PRAISES = Long.MAX_VALUE;
+        System.out.printf("thread " + sysThreadId + " :: exiting : Global : stat_REG_boot2_SUBSTANTIATE_NUMBER_OF_PRAISES(sysThreadId)" + ".%n");
     }
-    private static void stat_REG_boot3_INITIALISE_numberOfCores(byte sysThreadId)
-    {
-        stat_REG_numberOfCores = 3;
+    private static void stat_REG_boot3_INITIALISE_NUMBER_OF_THREADS(byte sysThreadId) {
+        System.out.printf("thread " + sysThreadId + " :: entered : Global : stat_REG_boot3_INITIALISE_NUMBER_OF_THREADS(sysThreadId)" + ".%n");
+        stat_REG_NUMBER_OF_THREADS = 3;
+        System.out.printf("thread " + sysThreadId + " :: exiting : Global : stat_REG_boot3_INITIALISE_NUMBER_OF_THREADS(sysThreadId)" + ".%n");
     }
-    private static void stat_REG_boot3_INITIALISE_numberOfPraises(byte sysThreadId)
-    {
-        stat_REG_numberOfPraises = 4;
+    private static void stat_REG_boot3_INITIALISE_NUMBER_OF_PRAISES(byte sysThreadId) {
+        System.out.printf("thread " + sysThreadId + " :: entered : Global : stat_REG_boot3_INITIALISE_NUMBER_OF_PRAISES(sysThreadId)" + ".%n");
+        stat_REG_NUMBER_OF_PRAISES = 4;
+        System.out.printf("thread " + sysThreadId + " :: exiting : Global : stat_REG_boot3_INITIALISE_NUMBER_OF_PRAISES(sysThreadId)" + ".%n");
     }
-    private static long stat_REG_get_numberOfCores(byte sysThreadId)
-    {
-        return stat_REG_numberOfCores;
+    private static byte pr_stat_REG_get_NUMBER_OF_THREADS(byte sysThreadId) {
+        System.out.printf("thread " + sysThreadId + " :: <= byte : pr_stat_REG_get_NUMBER_OF_THREADS(sysThreadId)" + ".%n");
+        return stat_REG_NUMBER_OF_THREADS;
     }
-    private static long stat_REG_get_numberOfPraises(byte sysThreadId)
-    {
-        return stat_REG_numberOfPraises;
+    private static long pr_stat_REG_get_NUMBER_OF_PRAISES(byte sysThreadId) {
+        System.out.printf("thread " + sysThreadId + " :: <= long : pr_stat_REG_get_NUMBER_OF_PRAISES(sysThreadId)" + ".%n");
+        return stat_REG_NUMBER_OF_PRAISES;
     }
 }
