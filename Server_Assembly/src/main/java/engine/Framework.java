@@ -1,6 +1,6 @@
 package engine;
 import SIMULATION.Simulation;
-import independent.threads.Thread_InputListen;
+import independent.threads.*;
 import independent.*;
 
 public class Framework
@@ -10,7 +10,7 @@ public class Framework
     private static Algorithm stat_STRUCT_Algorithm;
     private static Thread_InputListen stat_STRUCT_I_Listen;
     private static Input stat_STRUCT_Input;
-    private static Thread_InputListen stat_STRUCT_O_Respond;
+    private static Thread_OutputRespond stat_STRUCT_O_Respond;
     private static Output stat_STRUCT_Output;
     private static User_Algorithm stat_STRUCT_User_Algorithms;
     private static User_Input stat_STRUCT_User_Inputs;
@@ -204,7 +204,10 @@ public class Framework
     public User_Output dyn_STRUCT_get_User_Output(byte sysThreadId) {
         return stat_STRUCT_get_User_Output(sysThreadId);
     }
-    public IO_ListenRespond dyn_STRUCT_get_IO_ListenRespond(byte sysThreadId) {
+    public Thread_InputListen dyn_STRUCT_get_Thread_InputListen(byte sysThreadId) {
+        return stat_STRUCT_get_IO_ListenRespond(sysThreadId);
+    }
+    public Thread_OutputRespond dyn_STRUCT_get_Thread_OutputRespond(byte sysThreadId) {
         return stat_STRUCT_get_IO_ListenRespond(sysThreadId);
     }
     public void dyn_STRUCT_boot0_DECLAIRE(byte sysThreadId)
@@ -358,7 +361,7 @@ public class Framework
         }
     }
     private static void stat_STRUCT_boot3_INITIALISE_IO_ListenRespond(byte sysThreadId) {
-        stat_STRUCT_IO_ListenRespond = new IO_ListenRespond(sysThreadId);
+        stat_STRUCT_IO_ListenRespond = new Thread_OutputRespond(sysThreadId);
         try {
             stat_STRUCT_get_IO_ListenRespond(sysThreadId);
         }
@@ -374,7 +377,7 @@ public class Framework
     {
         return stat_STRUCT_Input;
     }
-    private static IO_ListenRespond stat_STRUCT_get_IO_ListenRespond(byte sysThreadId)
+    private static Thread_OutputRespond stat_STRUCT_get_IO_ListenRespond(byte sysThreadId)
     {
         return stat_STRUCT_IO_ListenRespond;
     }
