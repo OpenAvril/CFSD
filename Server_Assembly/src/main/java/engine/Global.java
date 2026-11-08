@@ -28,7 +28,6 @@ public class Global
         stat_REG_boot3_INITIALISE_NUMBER_OF_THREADS(sysThreadId);
         stat_REG_boot3_INITIALISE_NUMBER_OF_PRAISES(sysThreadId);
         System.out.printf("thread " + sysThreadId + " :: exiting : Global : dyn_REG_boot3_INITIALISE_Global(sysThreadId)" + ".%n");
-        System.out.printf("thread " + sysThreadId + "exiting dyn_REG_boot3_INITIALISE_Global()" + ".%n");
     }
     public static void dyn_REG_boot4_INSTANTIATE_Global(byte sysThreadId) {
         System.out.printf("thread " + sysThreadId + " :: entered : Global : dyn_REG_boot4_INSTANTIATE_Global(sysThreadId)" + ".%n");
