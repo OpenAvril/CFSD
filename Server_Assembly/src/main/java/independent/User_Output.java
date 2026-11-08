@@ -13,36 +13,36 @@ public class User_Output
     // public.
     public User_Output()
     {
-        System.out.printf("entered STRUCT_CLASS User_Output()%n");
+         System.out.printf("thread " + sysThreadId + "entered STRUCT_CLASS User_Output()%n");
         stat_CLASS_boot0_DECLAIRE_User_Output();
         stat_CLASS_boot1_DEFINE_User_Output();
         stat_CLASS_boot3_INITIALISE_User_Output();
         stat_REG_boot0_DECLAIRE_User_Output();
-        System.out.printf("exiting STRUCT_CLASS User_Output()%n");
+         System.out.printf("thread " + sysThreadId + "exiting STRUCT_CLASS User_Output()%n");
     }
     public void dyn_REG_boot1_DEFINE_User_Output()
     {
-        System.out.printf("entered dyn_REG_boot1_DEFINE_User_Output().%n");
+         System.out.printf("thread " + sysThreadId + "entered dyn_REG_boot1_DEFINE_User_Output()" + ".%n");
 
-        System.out.printf("exiting dyn_REG_boot1_DEFINE_User_Output().%n");
+         System.out.printf("thread " + sysThreadId + "exiting dyn_REG_boot1_DEFINE_User_Output()" + ".%n");
     }
     public void dyn_REG_boot2_SUBSTANTIATE_User_Output()
     {
-        System.out.printf("entered dyn_REG_boot2_SUBSTANTIATE_User_Output().%n");
+         System.out.printf("thread " + sysThreadId + "entered dyn_REG_boot2_SUBSTANTIATE_User_Output()" + ".%n");
 
-        System.out.printf("exiting dyn_REG_boot2_SUBSTANTIATE_User_Output().%n");
+         System.out.printf("thread " + sysThreadId + "exiting dyn_REG_boot2_SUBSTANTIATE_User_Output()" + ".%n");
     }
     public void dyn_REG_boot3_INITIALISE_User_Output()
     {
-        System.out.printf("entered dyn_REG_boot3_INITIALISE_User_Output().%n");
+         System.out.printf("thread " + sysThreadId + "entered dyn_REG_boot3_INITIALISE_User_Output()" + ".%n");
         stat_REG_boot3_INITIALISE_List_Of_OutputSubsets();
-        System.out.printf("exiting dyn_REG_boot3_INITIALISE_User_Output().%n");
+         System.out.printf("thread " + sysThreadId + "exiting dyn_REG_boot3_INITIALISE_User_Output()" + ".%n");
     }
     public void dyn_REG_boot4_INSTANTIATE_User_Output()
     {
-        System.out.printf("entered dyn_REG_boot4_INSTANTIATE_User_Output().%n");
+         System.out.printf("thread " + sysThreadId + "entered dyn_REG_boot4_INSTANTIATE_User_Output()" + ".%n");
 
-        System.out.printf("exiting dyn_REG_boot4_INSTANTIATE_User_Output().%n");
+         System.out.printf("thread " + sysThreadId + "exiting dyn_REG_boot4_INSTANTIATE_User_Output()" + ".%n");
     }
     public Object dyn_REG_get_Item_On_List_Of_OutputSubsets(long praiseId)
     {
@@ -51,18 +51,18 @@ public class User_Output
     // private.
     private static void stat_CLASS_boot0_DECLAIRE_User_Output()
     {
-        System.out.printf("entered stat_CLASS_boot0_DECLAIRE_User_Output().%n");
+         System.out.printf("thread " + sysThreadId + "entered stat_CLASS_boot0_DECLAIRE_User_Output()" + ".%n");
 
-        System.out.printf("exiting stat_CLASS_boot0_DECLAIRE_User_Output().%n");
+         System.out.printf("thread " + sysThreadId + "exiting stat_CLASS_boot0_DECLAIRE_User_Output()" + ".%n");
     }
     private static void stat_CLASS_boot1_DEFINE_User_Output()
     {
-        System.out.printf("entered stat_CLASS_boot1_DEFINE_User_Output().%n");
+         System.out.printf("thread " + sysThreadId + "entered stat_CLASS_boot1_DEFINE_User_Output()" + ".%n");
         stat_CLASS_boot1_DEFINE_Subest_praise0();
         stat_CLASS_boot1_DEFINE_Subest_praise1();
         stat_CLASS_boot1_DEFINE_Subest_praise2();
         stat_CLASS_boot1_DEFINE_Subest_praise3();
-        System.out.printf("exiting stat_CLASS_boot1_DEFINE_User_Output().%n");
+         System.out.printf("thread " + sysThreadId + "exiting stat_CLASS_boot1_DEFINE_User_Output()" + ".%n");
     }
     private static void stat_CLASS_boot1_DEFINE_Subest_praise0()
     {
@@ -82,12 +82,12 @@ public class User_Output
     }
     private static void stat_CLASS_boot3_INITIALISE_User_Output()
     {
-        System.out.printf("entered stat_CLASS_boot3_INITIALISE_User_Output().%n");
+         System.out.printf("thread " + sysThreadId + "entered stat_CLASS_boot3_INITIALISE_User_Output()" + ".%n");
         stat_CLASS_boot3_INITIALISE_Subest_praise0();
         stat_CLASS_boot3_INITIALISE_Subest_praise1();
         stat_CLASS_boot3_INITIALISE_Subest_praise2();
         stat_CLASS_boot3_INITIALISE_Subest_praise3();
-        System.out.printf("exiting stat_CLASS_boot3_INITIALISE_User_Output().%n");
+         System.out.printf("thread " + sysThreadId + "exiting stat_CLASS_boot3_INITIALISE_User_Output()" + ".%n");
     }
     private static void stat_CLASS_boot3_INITIALISE_Subest_praise0()
     {
@@ -127,13 +127,13 @@ public class User_Output
     }
     private static void stat_REG_boot0_DECLAIRE_User_Output()
     {
-        System.out.printf("entered stat_REG_boot0_DECLAIRE_User_Output().%n");
+         System.out.printf("thread " + sysThreadId + "entered stat_REG_boot0_DECLAIRE_User_Output()" + ".%n");
 
-        System.out.printf("exiting stat_REG_boot0_DECLAIRE_User_Output().%n");
+         System.out.printf("thread " + sysThreadId + "exiting stat_REG_boot0_DECLAIRE_User_Output()" + ".%n");
     }
     private static void stat_REG_boot3_INITIALISE_List_Of_OutputSubsets()
     {
-        System.out.printf("entered stat_CLASS_boot3_INITIALISE_User_Output_paiseId().%n");
+         System.out.printf("thread " + sysThreadId + "entered stat_CLASS_boot3_INITIALISE_User_Output_paiseId()" + ".%n");
         stat_REG_List_Of_OutputSubsets = new Object[4];//NUMBER OF PRAISES.
         while(stat_REG_get_List_Of_OutputSubsets() == null) { }
         stat_REG_List_Of_OutputSubsets[0] = stat_CLASS_get_Subest_praise0();
@@ -141,7 +141,7 @@ public class User_Output
         stat_REG_List_Of_OutputSubsets[2] = stat_CLASS_get_Subest_praise2();
         stat_REG_List_Of_OutputSubsets[3] = stat_CLASS_get_Subest_praise3();
 
-        System.out.printf("exiting stat_CLASS_boot3_INITIALISE_User_Output_paiseId().%n");
+         System.out.printf("thread " + sysThreadId + "exiting stat_CLASS_boot3_INITIALISE_User_Output_paiseId()" + ".%n");
     }
     private static Object[] stat_REG_get_List_Of_OutputSubsets()
     {
