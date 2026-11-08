@@ -1,8 +1,8 @@
 package engine;
 import SIMULATION.Simulation;
+import independent.threads.Thread_InputListen;
 import independent.*;
-import threads.Thread_InputListen;
-import threads.Thread_OutputRespond;
+
 public class Framework
 {
     private static App _stat_CLASS_App;
