@@ -1,5 +1,5 @@
 package threads;
-
+import com.github.openavril.slif.MutexQue;
 import engine.Framework;
 import engine.Global;
 import independent.Input;
@@ -23,7 +23,7 @@ public class Thread_OutputRespond {
         System.out.printf("thread " + threadId + " :: Entered THREAD member function.%n");
         boolean checkPass = false;
         while (!checkPass) {
-            WriteQue_ConditionCode.app_FUNCT_write_Start(0);
+            MutexQue.startByLock(sysThreadId, obj.dyn_CLASS_get_App().dyn_CLASS_get_Execute().dyn_CLASS_get_Execute_Control().);
             System.out.printf("thread " + threadId + " :: WriteQue : CC : open access @ 0%n");//todo SIMULATION
             obj.dyn_CLASS_get_App().dyn_CLASS_get_Execute().dyn_CLASS_get_Execute_Control().dyn_REG_set_Item_On_List_Of_Flag_ThreadInitialised(threadId, true);
             System.out.printf("thread " + threadId + " :: isThreadInitialised => " + obj.dyn_CLASS_get_App().dyn_CLASS_get_Execute().dyn_CLASS_get_Execute_Control().dyn_REG_get_Item_On_List_Of_Flag_ThreadInitialised(threadId) + ".%n");

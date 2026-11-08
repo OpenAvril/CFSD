@@ -15,7 +15,6 @@ public class Thread_InputListen {
         stat_REG_boot0_DECLAIRE_IO_ListenRespond();
     }
     public void dyn_Thread_InputListen(byte sysThreadId, Framework obj, byte ACCESS_ID) {
-        /*
         System.out.printf("thread " + sysThreadId + " :: entered APP :: threads : Thread_InputListen :  :: dyn_App_Thread_IO(byte sysThreadId, Framework obj, byte concurrentThreadId).%n");
         boolean checkPass = false;
         while (!checkPass) {
@@ -86,7 +85,6 @@ public class Thread_InputListen {
             WriteQue_ConditionCode.app_FUNCT_write_Start(0);
         }
         obj.dyn_CLASS_get_App().dyn_CLASS_get_Execute().dyn_CLASS_get_Execute_Control().app_Terminate_All_Threads(obj);
-         */
     }
     public void dyn_REG_boot1_DEFINE_IO_ListenRespond(byte sysThreadId, Framework obj) {
         System.out.printf("entered dyn_REG_boot1_DEFINE_IO_ListenRespond().%n");
